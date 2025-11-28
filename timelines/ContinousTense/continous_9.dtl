@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Write question using the words in brackets!\
+	9)  The teachers are playing handball in the gym. (Where)
+	- Where are the teachers playing handball?
+		[signal arg="correct"]
+	- Where is the teachers playing handball?
+		[signal arg="wrong"]
+	- Where are the teachers played handball?
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the question with Present Continous using the words in brackets!\
+	9)  ______ did I get the ______ you wanted to talk about it? (Why, feel)
+	[text_input var="answer"]
+	if {answer} == "Why feeling" or {answer} == "Why, feeling" or {answer} == "why feeling" or {answer} == "why, feeling":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Write question using the words in brackets!\
+	9)  Febri is talking on the telephone at the moment. (Who)
+	- Who are talking on the telephone at the moment?
+		[signal arg="wrong"]
+	- Who is talking on the telephone at the moment?
+		[signal arg="correct"]
+	- Who is talks on the telephone at the moment?
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the question with Present Continous using the words in brackets!\
+	9)  ______ are you ______ when you sweat? (What, lose)
+	[text_input var="answer"]
+	if {answer} == "What losing" or {answer} == "What, losing" or {answer} == "what losing" or {answer} == "what, losing":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Write question using the words in brackets!\
+	9)  My friend is watching a documentary in the living room now. (Who)
+	- What is my friend watching in the living room now?
+		[signal arg="wrong"]
+	- What are your friend watching in the living room now?
+		[signal arg="wrong"]
+	- What is your friend watching in the living room now?
+		[signal arg="correct"]
+elif {question} == 6:
+	Complete the question with Present Continous using the words in brackets!\
+	9)  ______ are you ______ to do after school (What, go)
+	[text_input var="answer"]
+	if {answer} == "What going" or {answer} == "What, going" or {answer} == "what going" or {answer} == "what, going":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Write question using the words in brackets!\
+	9)  I am talking with Reno in the school today (Who)
+	- Who are you talking with in the school today?
+		[signal arg="correct"]
+	- Who is you talking with in the school today?
+		[signal arg="wrong"]
+	- Who is me talking with in the school today?
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the question with Present Continous using the words in brackets!\
+	9)  ______ is the weather ______ these days? (How, change)
+	[text_input var="answer"]
+	if {answer} == "How changing" or {answer} == "How, changing" or {answer} == "how changing" or {answer} == "how, changing":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Write question using the words in brackets!\
+	9)  I am giving him a pair of shoes for his next birthday. (What)
+	- What is you giving his for him next birthday?
+		[signal arg="wrong"]
+	- What are you giving him for his next birthday?
+		[signal arg="correct"]
+	- What are you giving his for him next birthday?
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the question with Present Continous using the words in brackets!\
+	9)  ______ is ______ in this room? (What, happen)
+	[text_input var="answer"]
+	if {answer} == "What happening" or {answer} == "What, happening" or {answer} == "what happening" or {answer} == "what, happening":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

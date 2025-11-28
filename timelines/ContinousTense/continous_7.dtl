@@ -1,0 +1,92 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence making them negative!\
+	7)  Saleh is drying her hair now.
+	- Saleh isn't drying her hair now.
+		[signal arg="correct"]
+	- Saleh is drying her hair now.
+		[signal arg="wrong"]
+	- Saleh aren't drying her hair now.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Rewrite the sentence making them positive!\
+	7)  My mother isn't writing a letter to her sister now. 
+	- My mother isn't writing a letter to her sister now.
+		[signal arg="wrong"]
+	- My mother is writing a letter to her sister now.
+		[signal arg="correct"]
+	- My mother aren't writing a letter to her now.
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence making them negative!\
+	7)  The girls are organizing a surprise party at the moment.
+	- The girls are organizing a surprise party at the moment.
+		[signal arg="wrong"]
+	- The girls aren't organizeing a surprise party at the moment..
+		[signal arg="wrong"]
+	- The girls aren't organizing a surprise party at the moment.
+		[signal arg="correct"]
+elif {question} == 4:
+	Rewrite the sentence making them positive!\
+	7)  Brian isn't playing the guitar at the moment.
+	- Brian is playing the guitar at the moment.
+		[signal arg="correct"]
+	- Brian isn't playing the guitar at the moment.
+		[signal arg="wrong"]
+	- Brian are playing the guitar at the moment.
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence making them negative!\
+	7)  I am solving a very difficult Maths problem.
+	- I am solving a very difficult Maths problem.
+		[signal arg="wrong"]
+	- I am not solving a very difficult Maths problem.
+		[signal arg="correct"]
+	- I are not solving a very difficult Maths problem.
+		[signal arg="wrong"]
+elif {question} == 6:
+	Rewrite the sentence making them positive!\
+	7)  Our boss isn't having a meeting at the moment.
+	- Our boss isn't having a meeting at the moment.
+		[signal arg="wrong"]
+	- Our boss is having a meeting at the moment.
+		[signal arg="correct"]
+	- Our boss are having a meeting at the moment.
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence making them negative!\
+	7)  They are delivering the package to the warehouse.
+	- They are delivering the package to the warehouse.
+		[signal arg="wrong"]
+	- They isn't delivering the package to the warehouse.
+		[signal arg="wrong"]
+	- They aren't delivering the package to the warehouse.
+		[signal arg="correct"]
+elif {question} == 8:
+	Rewrite the sentence making them positive!\
+	7)  The kids aren't currently running toward us now.
+	- The kids are currently running toward us now.
+		[signal arg="correct"]
+	- The kids aren't currently running toward us now.
+		[signal arg="wrong"]
+	- The kids is currently running toward us now.
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence making them negative!\
+	7)  I am studying for my university exam this year.
+	- I am studying for my university exam this year.
+		[signal arg="wrong"]
+	- I am not studying for my university exam this year.
+		[signal arg="correct"]
+	- I am not studied for my university exam this year.
+		[signal arg="wrong"]
+elif {question} == 10:
+	Rewrite the sentence making them positive!\
+	7)  We aren't wanting you to come with us.
+	- We are waiting you to come with us.
+		[signal arg="wrong"]
+	- We aren't wanting you to come with us.
+		[signal arg="wrong"]
+	- We are wanting you to come with us.
+		[signal arg="correct"]

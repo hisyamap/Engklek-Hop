@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence using the words in brackets!\
+	8)  Bobby eats the food and washes the dishes. (yesterday)
+	- Bobby eats the food and washes the dishes yesterday.
+		[signal arg="wrong"]
+	- Bobby ate the food and washed the dishes yesterday.
+		[signal arg="correct"]
+	- Bobby ate the food and washes the dishes yesterday.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Simple Past!\
+	8)  Tina ______ (buy) the lights she'd wanted for years.
+	[text_input var="answer"]
+	if {answer} == "bought":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence using the words in brackets!\
+	8)  Mr. Ammar brings the coffee. (ten minutes later)
+	- Mr. Ammar brings the coffee ten minutes later.
+		[signal arg="wrong"]
+	- Mr. Ammar brought the coffee
+		[signal arg="wrong"]
+	- Mr. Ammar brought the coffee ten minutes later.
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following sentence using Simple Past!\
+	8)  He ______ (draw) me a map of the city.
+	[text_input var="answer"]
+	if {answer} == "drew":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence using the words in brackets!\
+	8)  She goes to the airport with him. (that night)
+	- She went to the airport with him that night.
+		[signal arg="correct"]
+	- She goes to the airport with him that night.
+		[signal arg="wrong"]
+	- She went to the airport with him.
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Simple Past!\
+	8)  I ______ (come) down with Yunif to get something to eat.
+	[text_input var="answer"]
+	if {answer} == "came":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence using the words in brackets!\
+	8)  They seemed happy with the results of the project (Ezar and Edgar)
+	- Ezar and Edgar semed happy with the results of the project
+		[signal arg="wrong"]
+	- Ezar and Edgar seems happy with the results of the project
+		[signal arg="wrong"]
+	- Ezar and Edgar seemed happy with the results of the project.
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Simple Past!\
+	8)  The first time I ______ (see) him act was while at school in Jakarta.
+	[text_input var="answer"]
+	if {answer} == "saw":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence using the words in brackets!\
+	8)  They meet my brother in the mosque. (last April)
+	- They meet my brother in the mosque last April.
+		[signal arg="wrong"]
+	- They met my brother in the mosque.
+		[signal arg="wrong"]
+	- They met my brother in the mosque last April.
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Simple Past!\
+	8)  On the afternoon, I ______ (stand) on the porch of my house.
+	[text_input var="answer"]
+	if {answer} == "stood":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

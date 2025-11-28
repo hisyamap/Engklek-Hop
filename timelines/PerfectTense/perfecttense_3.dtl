@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	3)  People ______ traveled to Venus.
+	- haven't
+		[signal arg="correct"]
+	- hasn't
+		[signal arg="wrong"]
+	- hadn't
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	3)  The banana ______ turned brown yet. (hasn't/haven't)
+	[text_input var="answer"]
+	if {answer} == "hasn't" or {answer} == "has not" or {answer} == "hasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	3)  My brother ______ driven a car before.
+	- hadn't
+		[signal arg="wrong"]
+	- have't
+		[signal arg="wrong"]
+	- hasn't
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	3)  Have they played the piano? No, they ______. (hasn't/haven't)
+	[text_input var="answer"]
+	if {answer} == "haven't" or {answer} == "have not" or {answer} == "havent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	3)  Mr. Karyadi ______ called for eight months.
+	- hadn't
+		[signal arg="wrong"]
+	- hasn't
+		[signal arg="correct"]
+	- haven't
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	3)  I ______ seen my mother recently. (hasn't/haven't)
+	[text_input var="answer"]
+	if {answer} == "haven't" or {answer} == "have not" or {answer} == "havent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	3)  We ______ gone to watch the new movie.
+	- hasn't
+		[signal arg="wrong"]
+	- haven't
+		[signal arg="correct"]
+	- hadn't
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	3)  The cat ______ eaten all of its food (hasn't/haven't)
+	[text_input var="answer"]
+	if {answer} == "has't" or {answer} == "has not" or {answer} == "hasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	3)  She ______ graduated from college yet.
+	- hasn't
+		[signal arg="correct"]
+	- haven't
+		[signal arg="wrong"]
+	- hadn't
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	3)  My teacher ______ replied to my email.  (hasn't/haven't)
+	[text_input var="answer"]
+	if {answer} == "has't" or {answer} == "has not" or {answer} == "hasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

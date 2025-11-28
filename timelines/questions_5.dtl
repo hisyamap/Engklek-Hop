@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	5)  He _______ breakfast now.
+	- want
+		[signal arg="wrong"]
+	- wants
+		[signal arg="correct"]
+	- wanted
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	5)  My parents _______ in a two-bedroom apartment. (live/lives)
+	[text_input var="answer"]
+	if {answer} == "live":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	5)  She _______ in Jakarta.
+	- live
+		[signal arg="wrong"]
+	- lives
+		[signal arg="correct"]
+	- living
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	5)  The stars _______ at night. (shine/shines)
+	[text_input var="answer"]
+	if {answer} == "shine":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	5)  Amy _______ the loud voices at the concert venue.
+	- hate
+		[signal arg="wrong"]
+	- hates
+		[signal arg="correct"]
+	- hating
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	5)  Do you _______ your brother? (like/likes)
+	[text_input var="answer"]
+	if {answer} == "like":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	5)  My sister _______ his favorite TV program every morning.
+	- watch
+		[signal arg="wrong"]
+	- watching
+		[signal arg="wrong"]
+	- watches
+		[signal arg="correct"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	5)  I work twelve hours a day, but I _______ my job. (love/loves)
+	[text_input var="answer"]
+	if {answer} == "love":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	5)  I usually _______ very early in the morning.
+	- gets up
+		[signal arg="wrong"]
+	- get up 
+		[signal arg="correct"]
+	- am getting up
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	5)  My mother _______ English at high school. (teach/teaches)
+	[text_input var="answer"]
+	if {answer} == "teaches":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	4)  I _______ wake up early today.
+	- don't
+		[signal arg="correct"]
+	- doesn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	4)  My uncle _______ go walking to the store. (don't/doesn't)
+	[text_input var="answer"]
+	if {answer} == "doesn't" or {answer} == "does not" or {answer} == "doesnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	4)  We _______ want to go to the gym.
+	- don't
+		[signal arg="correct"]
+	- doesn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	4)  They _______ eat lunch together. (don't/doesn't)
+	[text_input var="answer"]
+	if {answer} == "don't" or {answer} == "do not" or {answer} == "dont":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	4)  She _______ listen to music while she exercise.
+	- don't
+		[signal arg="wrong"]
+	- doesn't
+		[signal arg="correct"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	4)  Joko and Anto _______ play in the team. (don't/doesn't)
+	[text_input var="answer"]
+	if {answer} == "don't" or {answer} == "do not" or {answer} == "dont":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	4)  The bread _______ taste good.
+	- don't
+		[signal arg="wrong"]
+	- doesn't
+		[signal arg="correct"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	4)  My mother _______ know I'm on the stage. (don't/doesn't)
+	[text_input var="answer"]
+	if {answer} == "does't" or {answer} == "does not" or {answer} == "doesnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	4)  Brian _______ write postcard on special days.
+	- don't
+		[signal arg="wrong"]
+	- doesn't
+		[signal arg="correct"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	4)  The kids _______ play in the park today. (don't/doesn't)
+	[text_input var="answer"]
+	if {answer} == "don't" or {answer} == "do not" or {answer} == "dont":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

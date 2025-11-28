@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence making them negative!\
+	9)  She likes pop music and comic books.
+	- She doesn't likes pop music and comic books.
+		[signal arg="wrong"]
+	- She doesn't like pop music and comic books.
+		[signal arg="correct"]
+	- She don't like pop music and comic books.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence with negative verbs!\
+	9)  Joko _______ (not/work) at a factory in Jakarta.
+	[text_input var="answer"]
+	if {answer} == "doesn't work" or {answer} == "does not work" or {answer} == "doesnt work":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence making them negative!\
+	9)  They visit their grandparents every weekend.
+	- They doesn't visit their grandparents every weekend.
+		[signal arg="wrong"]
+	- They don't visits their grandparents every weekend.
+		[signal arg="wrong"]
+	- They don't visit their grandparents every weekend.
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following sentence with negative verbs!\
+	9)  My sister _______ (not/exercise) in the morning.
+	[text_input var="answer"]
+	if {answer} == "doesn't exercise" or {answer} == "does not exercise" or {answer} == "doesnt exercise":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence making them negative!\
+	9)  Our aunt cooks delicous chocolate cakes for us.
+	- Our aunt don't cooks delicous chocolate cakes for us.
+		[signal arg="wrong"]
+	- Our aunt doesn't cook delicous chocolate cakes for us.
+		[signal arg="correct"]
+	- Our aunt doesn't cooks delicous chocolate cakes for us.
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence with negative verbs!\
+	9)  We _______ (not/have) English classes on Monday.
+	[text_input var="answer"]
+	if {answer} == "don't have" or {answer} == "do not have" or {answer} == "dont have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence making them negative!\
+	9)  I play the drum in the school band.
+	- I don't plays the drum in the school band.
+		[signal arg="wrong"]
+	- I doesn't plays the drum in the school band.
+		[signal arg="wrong"]
+	- I don't play the drum in the school band.
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence with negative verbs!\
+	9)  Maria and Gebian _______ (not/like) to eat fried rice here.
+	[text_input var="answer"]
+	if {answer} == "don't like" or {answer} == "do not like" or {answer} == "dont like":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence making them negative!\
+	9)  My classmates study English before school.
+	- My classmates don't study English before school.
+		[signal arg="correct"]
+	- My classmates doen't study English before school.
+		[signal arg="wrong"]
+	- My classmates doen't studies English before school.
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the following sentence with negative verbs!\
+	9)  Brian _______ (not/do) his homework at night.
+	[text_input var="answer"]
+	if {answer} == "doesn't do" or {answer} == "does not do" or {answer} == "doesnt do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

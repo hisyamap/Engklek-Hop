@@ -1,0 +1,168 @@
+[gd_scene load_steps=11 format=3 uid="uid://kh52hvttlli3"]
+
+[ext_resource type="Texture2D" uid="uid://cvo581dtf0jkb" path="res://Assets/Game Scene Type 1.png" id="1_xt6cv"]
+[ext_resource type="Script" path="res://EngklekBox.gd" id="2_krcqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsvhk"]
+size = Vector2(64, 67.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rms51"]
+size = Vector2(62, 30.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcou4"]
+size = Vector2(65.5, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpthy"]
+size = Vector2(84.25, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqqkk"]
+size = Vector2(76, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctsmf"]
+size = Vector2(1010.38, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jbn0"]
+size = Vector2(64.625, 14.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52flr"]
+size = Vector2(63.25, 12.5)
+
+[node name="LevelType1" type="Node2D"]
+script = ExtResource("2_krcqe")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xt6cv")
+
+[node name="Box1" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1"]
+position = Vector2(305, 517)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box2" type="Area2D" parent="."]
+position = Vector2(120, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2"]
+position = Vector2(302, 517)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box3" type="Area2D" parent="."]
+position = Vector2(240, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box3"]
+position = Vector2(294, 518)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box4" type="Area2D" parent="."]
+position = Vector2(360, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box4"]
+position = Vector2(322, 500)
+shape = SubResource("RectangleShape2D_rms51")
+
+[node name="Box5" type="Area2D" parent="."]
+position = Vector2(720, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box5"]
+position = Vector2(-81, 560)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box6" type="Area2D" parent="."]
+position = Vector2(480, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box6"]
+position = Vector2(296, 517)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box7" type="Area2D" parent="."]
+position = Vector2(480, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box7"]
+position = Vector2(431, 503)
+shape = SubResource("RectangleShape2D_bcou4")
+
+[node name="Box8" type="Area2D" parent="."]
+position = Vector2(600, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box8"]
+position = Vector2(279, 558)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="Box9" type="Area2D" parent="."]
+position = Vector2(720, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box9"]
+position = Vector2(307.875, 528.5)
+shape = SubResource("RectangleShape2D_fpthy")
+
+[node name="Box10" type="Area2D" parent="."]
+position = Vector2(840, 0)
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box10"]
+position = Vector2(312, 505)
+shape = SubResource("RectangleShape2D_hsvhk")
+
+[node name="BoxWin" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxWin"]
+position = Vector2(166, 500)
+shape = SubResource("RectangleShape2D_bqqkk")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(721, 558)
+shape = SubResource("RectangleShape2D_ctsmf")
+
+[node name="Platform Box 4" type="StaticBody2D" parent="."]
+position = Vector2(158, 48)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Box 4"]
+position = Vector2(531.313, 466)
+shape = SubResource("RectangleShape2D_7jbn0")
+
+[node name="Platform Box 7" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform Box 7"]
+position = Vector2(919, 515)
+shape = SubResource("RectangleShape2D_52flr")
+
+[connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
+[connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
+[connection signal="body_entered" from="Box2" to="." method="_on_box_2_body_entered"]
+[connection signal="body_exited" from="Box2" to="." method="_on_box_2_body_exited"]
+[connection signal="body_entered" from="Box3" to="." method="_on_box_3_body_entered"]
+[connection signal="body_exited" from="Box3" to="." method="_on_box_3_body_exited"]
+[connection signal="body_entered" from="Box4" to="." method="_on_box_4_body_entered"]
+[connection signal="body_entered" from="Box5" to="." method="_on_box_5_body_entered"]
+[connection signal="body_exited" from="Box5" to="." method="_on_box_5_body_exited"]
+[connection signal="body_entered" from="Box6" to="." method="_on_box_6_body_entered"]
+[connection signal="body_exited" from="Box6" to="." method="_on_box_6_body_exited"]
+[connection signal="body_entered" from="Box7" to="." method="_on_box_7_body_entered"]
+[connection signal="body_exited" from="Box7" to="." method="_on_box_7_body_exited"]
+[connection signal="body_entered" from="Box8" to="." method="_on_box_8_body_entered"]
+[connection signal="body_exited" from="Box8" to="." method="_on_box_8_body_exited"]
+[connection signal="body_entered" from="Box9" to="." method="_on_box_9_body_entered"]
+[connection signal="body_exited" from="Box9" to="." method="_on_box_9_body_exited"]
+[connection signal="body_entered" from="Box10" to="." method="_on_box_10_body_entered"]
+[connection signal="body_exited" from="Box10" to="." method="_on_box_10_body_exited"]
+[connection signal="body_entered" from="BoxWin" to="." method="_on_box_win_body_entered"]

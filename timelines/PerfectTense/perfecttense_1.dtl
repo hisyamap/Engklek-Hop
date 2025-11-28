@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+1)  He ______ played this game before.
+	- have
+		[signal arg="wrong"]
+	- has
+		[signal arg="correct"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+1)  I ______ finished my homework. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+1)  She ______ lived in Jakarta for two years.
+	- have
+		[signal arg="wrong"]
+	- has
+		[signal arg="correct"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+1)  He ______ won many awards for his writing. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+1)  They ______ studied English for five years.
+	- have
+		[signal arg="correct"]
+	- has
+		[signal arg="wrong"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+1)  We ______ seen that movie before. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+1)  She ______ read all of the book in that series.
+	- have
+		[signal arg="wrong"]
+	- has
+		[signal arg="correct"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+1)  it ______ drunk the water. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+1)  We ______ received the package.
+	- had
+		[signal arg="wrong"]
+	- has
+		[signal arg="wrong"]
+	- have
+		[signal arg="correct"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+1)  You ______ to listened to Coldplay in the concert. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

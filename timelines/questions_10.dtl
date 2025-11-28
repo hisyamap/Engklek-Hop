@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Write question using the words in brackets!\
+	10) She phones her best friend twice a week. (How)
+	- How often do she phone her best friend?
+		[signal arg="wrong"]
+	- How often does she phone her best friend?
+		[signal arg="correct"]
+	- How many does she phone her best friend?
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following question using the words in brackets!\
+	10)  _____ _____ the rain fall? (Why)
+	[text_input var="answer"]
+	if {answer} == "Why does" or {answer} == "why does":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Write question using the words in brackets!\
+	10) Rita washes her cat in the garden every Sunday. (Where)
+	- Where do Rita wash her cat every Sunday?
+		[signal arg="wrong"]
+	- Where do Rita washes her cat every Sunday?
+		[signal arg="wrong"]
+	- Where does Rita wash her cat every Sunday?
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following question using the words in brackets!\
+	10)  _____ _____ you think of it, Prince? (What)
+	[text_input var="answer"]
+	if {answer} == "What do" or {answer} == "what do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Write question using the words in brackets!\
+	10) My parents do the housework every weekend. (What)
+	- What do your parents do every weekend?
+		[signal arg="correct"]
+	- What does your parents do every weekend?
+		[signal arg="wrong"]
+	- What do your parents does every weekend?
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following question using the words in brackets!\
+	10)  _____ _____ you feel today, son? (How)
+	[text_input var="answer"]
+	if {answer} == "How do" or {answer} == "how do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Write question using the words in brackets!\
+	10) Joko buys bread and milk every morning. (Who)
+	- Who buy bread and milk every morning?
+		[signal arg="wrong"]
+	- Who buys bread and milk every morning?
+		[signal arg="correct"]
+	- Who buyes bread and milk every morning?
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following question using the words in brackets!\
+	10)  _____ _____ he keep it stashed? (Where)
+	[text_input var="answer"]
+	if {answer} == "Where does" or {answer} == "where does":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Write question using the words in brackets!\
+	10) My cousins go to school by their bicycles. (How)
+	- How does your cousins go to school?
+		[signal arg="wrong"]
+	- How do your cousins goes to school?
+		[signal arg="wrong"]
+	- How do your cousins go to school?
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following question using the words in brackets!\
+	10)  _____ _____ you go take a nice warm shower? (Why)
+	[text_input var="answer"]
+	if {answer} == "Why don't" or {answer} == "why don't" or {answer} == "why dont":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

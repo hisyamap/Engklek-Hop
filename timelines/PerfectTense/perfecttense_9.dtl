@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blanks with the correct answer!\
+	9)  I ______ ______ my science homework yet.
+	- haven't, do
+		[signal arg="wrong"]
+	- hasn't, doing
+		[signal arg="wrong"]
+	- haven't, done
+		[signal arg="correct"]
+elif {question} == 2:
+	Complete the following sentence using Present Perfect!\
+	9)   We ______ ______ (leave) the department store yet. (haven't/hasn't)
+	[text_input var="answer"]
+	if {answer} == "haven't left" or {answer} == "havent left" or {answer} == "have not left":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blanks with the correct answer!\
+	9)  Adam ______ ______ the postcards to his friends.
+	- hasn't sent
+		[signal arg="correct"]
+	- haven't sent
+		[signal arg="wrong"]
+	- haven't send
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Present Perfect!\
+	9)   My uncle ______ ______ (repair) our refrigerator. (haven't/hasn't)
+	[text_input var="answer"]
+	if {answer} == "hasn't repaired" or {answer} == "hasnt repaired" or {answer} == "has not repaired":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blanks with the correct answer!\
+	9)  Denis and Adit ______ ______ to Lombok Island.
+	- hasn't visited
+		[signal arg="wrong"]
+	- haven't been
+		[signal arg="correct"]
+	- hasn't been
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Perfect!\
+	9)   My cousins ______ ______ (move) to another town. (haven't/hasn't)
+	[text_input var="answer"]
+	if {answer} == "haven't moved" or {answer} == "havent moved" or {answer} == "have not moved":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blanks with the correct answer!\
+	9)  The guests ______ ______ any photographs yet. 
+	- hasn't took
+		[signal arg="wrong"]
+	- haven't took
+		[signal arg="wrong"]
+	- haven't taken
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Present Perfect!\
+	9)   Mr.Zainal ______ ______ (drive) his car since Sunday. (haven't/hasn't)
+	[text_input var="answer"]
+	if {answer} == "hasn't driven" or {answer} == "hasnt driven" or {answer} == "has not driven":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blanks with the correct answer!\
+	9)  We ______ ______ any mail since we were retired. 
+	- haven't recieved
+		[signal arg="correct"]
+	- hasn't recieve
+		[signal arg="wrong"]
+	- haven't recieve
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the following sentence using Present Perfect!\
+	9)   They ______ ______ (go) to the shopping center. (haven't/hasn't)
+	[text_input var="answer"]
+	if {answer} == "haven't gone" or {answer} == "havent gone" or {answer} == "have not gone":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

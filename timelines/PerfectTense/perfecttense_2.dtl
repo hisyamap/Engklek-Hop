@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	2)  My sister ______ just returned from the library.
+	- has
+		[signal arg="correct"]
+	- have
+		[signal arg="wrong"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	2)  My father ______ worked in Jakarta for a long time. (has/have)
+	[text_input var="answer"]
+	if {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	2)  The hens ______ laid plenty of eggs.
+	- has
+		[signal arg="wrong"]
+	- had
+		[signal arg="wrong"]
+	- have
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	2)  Sinta and her mother ______ gone to the shopping center. (has/have)
+	[text_input var="answer"]
+	if {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	2)  The baby ______ slept since all night. 
+	- had
+		[signal arg="wrong"]
+	- has
+		[signal arg="correct"]
+	- have
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	2)  There ______ been an accident. (has/have)
+	[text_input var="answer"]
+	if {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	2)  Tomi ______ sent me the most precious gifts. 
+	- has
+		[signal arg="correct"]
+	- had
+		[signal arg="wrong"]
+	- have
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	2)  The postman ______ delivered all the mail. (has/have)
+	[text_input var="answer"]
+	if {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	2)  Our parents ______ traveled to several coutries.
+	- has
+		[signal arg="wrong"]
+	- have
+		[signal arg="correct"]
+	- had
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	2)  Joko and I ______ sung a song in the classroom (has/have)
+	[text_input var="answer"]
+	if {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

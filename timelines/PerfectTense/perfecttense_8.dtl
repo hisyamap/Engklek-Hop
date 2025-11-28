@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	8)  She ______ ______ to take her umbrella with her.
+	- have, forgot
+		[signal arg="wrong"]
+	- has, forgotted
+		[signal arg="wrong"]
+	- has, forgotten
+		[signal arg="correct"]
+elif {question} == 2:
+	Complete the following sentence using Present Perfect!\
+	8)  It is a little speech that I ______ ______ (write) for him. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have written":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	8)  Faris ______ ______ his raincoat to get through the rain.
+	- has worn
+		[signal arg="correct"]
+	- has wore
+		[signal arg="wrong"]
+	- have weared
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Present Perfect!\
+	8)  They ______ ______ (have) many cars since I can remember. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have had":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	8)  Joko’s sisters ______ just ______ out to visit the city museum.
+	- has went
+		[signal arg="wrong"]
+	- have gone
+		[signal arg="correct"]
+	- has gone
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Perfect!\
+	8)  Just about everyone ______ ______ (hear) one story about Malin Kundang. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has heard":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	8)  Tara and Gema ______ ______ each other since they were born.
+	- has known
+		[signal arg="wrong"]
+	- have known
+		[signal arg="correct"]
+	- has knowed
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Present Perfect!\
+	8)  He ______ ______ (speak) about his support for human rights. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has spoken":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	8)  I ______ never ______ such an expensive house.
+	- have saw
+		[signal arg="wrong"]
+	- has see
+		[signal arg="wrong"]
+	- have seen
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Present Perfect!\
+	8)  The use of pesticides there ______ ______ (be) so concentrated. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has been":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

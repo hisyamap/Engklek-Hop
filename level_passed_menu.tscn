@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://de81vigbrtars"]
+
+[ext_resource type="Script" path="res://level_passed_menu.gd" id="1_nhhxy"]
+[ext_resource type="Texture2D" uid="uid://dt6xny17rmiak" path="res://Assets/Level Passed!.png" id="2_jpnn4"]
+[ext_resource type="Texture2D" uid="uid://dmx6xq5plrhsd" path="res://Assets/+ 100 Points.png" id="3_qi153"]
+[ext_resource type="Texture2D" uid="uid://dcuvrlap3s54m" path="res://Assets/Next Level Button.png" id="4_ca68i"]
+[ext_resource type="Texture2D" uid="uid://bgi1277cjir1q" path="res://Assets/MainMenu Button.png" id="5_qmtl2"]
+
+[sub_resource type="Theme" id="Theme_u4ix2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1sdh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bmd0o"]
+
+[node name="LevelPassedMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nhhxy")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.270588)
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 387.5
+offset_top = 110.0
+offset_right = 889.5
+offset_bottom = 206.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_jpnn4")
+
+[node name="PointsGained" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 475.5
+offset_top = 210.0
+offset_right = 784.5
+offset_bottom = 270.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_qi153")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="NextLevelButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_u4ix2")
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_u1sdh")
+icon = ExtResource("4_ca68i")
+flat = true
+icon_alignment = 1
+
+[node name="MainmenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bmd0o")
+icon = ExtResource("5_qmtl2")
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

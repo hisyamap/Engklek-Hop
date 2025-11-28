@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	2)  My father ______ working today.
+	- is
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	2)  The baby ______ laughing at the bear doll. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	2)  All the family members ______ sharing the housework
+	- is
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	2)  My uncle and my aunt ______ playing cards now. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	2)  Tono and Tina ______ picking daisies for their grandmother.
+	- is
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	2)  Someone ______ knocking the front door. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	2)  The detective ______ looking for something at the crime scene.
+	- is
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	2)  A few children ______ playing engklek in the playground. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	2)  Be quiet! Your baby brother ______ sleeping peacefully in his cradle.
+	- is
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	2)  I can't let anyone watch what I ______ doing. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "am":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

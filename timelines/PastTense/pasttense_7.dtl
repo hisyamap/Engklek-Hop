@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  He was going to call the doctor. (They)
+	- They was going to call the doctor.
+		[signal arg="wrong"]
+	- They were going to call the doctor.
+		[signal arg="correct"]
+	- They weren't going to call the doctor.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Simple Past!\
+	7)  He ______ (do) not know whether he should eat the rice or the noodle.
+	[text_input var="answer"]
+	if {answer} == "did":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  We were getting worried about you. (Your parents)
+	- Your parents were getting worried about you.
+		[signal arg="correct"]
+	- Your parents was getting worried about you.
+		[signal arg="wrong"]
+	- Your parents wasn't getting worried about you.
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Simple Past!\
+	7)  I ______ (study) human nature for the entirety of my existence.
+	[text_input var="answer"]
+	if {answer} == "studied":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  Truthfully, Ilham wasn't all that good a dancer. (We)
+	- Truthfully, We wasn't all that good at dancing.
+		[signal arg="wrong"]
+	- Truthfully, We were all that good at dancing.
+		[signal arg="wrong"]
+	- Truthfully, We weren't all that good at dancing.
+		[signal arg="correct"]
+elif {question} == 6:
+	Complete the following sentence using Simple Past!\
+	7)  Last week I ______ (visit) a beautiful art store.
+	[text_input var="answer"]
+	if {answer} == "visited":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  I watched for some encouraging signs. (Tono and Joko)
+	- Tono and Joko are watching for some encouraging signs.
+		[signal arg="wrong"]
+	- Tono and Joko watch for some encouraging signs.
+		[signal arg="wrong"]
+	- Tono and Joko watched for some encouraging signs.
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Simple Past!\
+	7)  She ______ (miss) the bus this morning because she woke up late.
+	[text_input var="answer"]
+	if {answer} == "missed":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  You weren't giving me much information. (My parents)
+	- My parents wasn't giving me much information.
+		[signal arg="wrong"]
+	- My parents wasn giving me much information.
+		[signal arg="wrong"]
+	- My parents weren't giving me much information.
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Simple Past!\
+	7)  Sinta ______ (mourn) the loss of all she'd ever learned or known.
+	[text_input var="answer"]
+	if {answer} == "mourned":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

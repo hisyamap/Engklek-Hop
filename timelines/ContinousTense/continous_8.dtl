@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  He is eating pizza at a restaurant right now. (Faiz and Liza)
+	- Faiz and Lia is eating pizza at a restaurant right now.
+		[signal arg="wrong"]
+	- Faiz and Lia are eating pizza at a restaurant right now.
+		[signal arg="correct"]
+	- Faiz and Lia are eat pizza at a restaurant right now.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Present Continous!\
+	8)  Those films ______ (not be) made now. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "aren't being" or {answer} == "are not being" or {answer} == "arent being":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  They are having breakfast on their balcony at the moment. (I) 
+	- I are having breakfast on my balcony at the moment.
+		[signal arg="wrong"]
+	- I am having breakfast on their balcony at the moment.
+		[signal arg="wrong"]
+	- I am having breakfast on my balcony at the moment.
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following sentence using Present Continous!\
+	8)  Khalid ______ (not drink) his guava juice at the moment. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "isn't drinking" or {answer} == "is not drinking" or {answer} == "isnt drinking":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Are Laria and Joko skipping rope in the school garden now? (my sister)
+	- Is my sister skipping rope in the school garden now?
+		[signal arg="correct"]
+	- Are my sister skipping rope in the school garden now?
+		[signal arg="wrong"]
+	- Am my sister skipping rope in the school garden now?
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Continous!\
+	8)   Mrs. Sri ______ (not work) now because she feels so tired. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "isn't working" or {answer} == "is not working" or {answer} == "isnt working":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Putra is listening to the professor and taking notes. (All the students)
+	- All the students is listening to the professor and taking notes.
+		[signal arg="wrong"]
+	- All the students are listening to the professor and taking notes.
+		[signal arg="correct"]
+	- All the students are listen to the professor and taking notes.
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Present Continous!\
+	8)  I ______ (not clean) my bedroom at the moment. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "am not cleaning":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Is he going to change his clothes right now? (They)
+	- Is they going to change their clothes right now?
+		[signal arg="wrong"]
+	- Are they going to change his clothes right now?
+		[signal arg="wrong"]
+	- Are they going to change their clothes right now?
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Present Continous!\
+	8)  It ______ (not rain) anymore, we can go outside now.  (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "isn't raining" or {answer} == "is not raining" or {answer} == "isnt raining":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

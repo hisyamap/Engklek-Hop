@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drnikl5mlgkp2"
+path="res://.godot/imported/Level Passed Sound.wav-aaf00021933f89fe310b7a2360d0e6fb.sample"
+
+[deps]
+
+source_file="res://Assets/MusicSFX/Level Passed Sound.wav"
+dest_files=["res://.godot/imported/Level Passed Sound.wav-aaf00021933f89fe310b7a2360d0e6fb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

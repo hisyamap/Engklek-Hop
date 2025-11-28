@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	4)  _______ you ever stayed in a hotel?
+	- Have 
+		[signal arg="correct"]
+	- Has
+		[signal arg="wrong"]
+	- Had
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	4)  ______ you just finished homework? (Have/Has)
+	[text_input var="answer"]
+	if {answer} == "Have" or {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	4)  _______ the post arrived yet?
+	- Had 
+		[signal arg="wrong"]
+	- Have
+		[signal arg="wrong"]
+	- Has
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	4)  ______ your brother finished decorating yet? (Have/Has)
+	[text_input var="answer"]
+	if {answer} == "Has" or {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	4)  ______ you been to this place before?
+	- Had 
+		[signal arg="wrong"]
+	- Have
+		[signal arg="correct"]
+	- Has
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	4)  ______ they done their work? (Have/Has)
+	[text_input var="answer"]
+	if {answer} == "Have" or {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	4)  ______ your students read any good books lately?
+	- Have
+		[signal arg="correct"]
+	- Had
+		[signal arg="wrong"]
+	- Has
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	4)  ______ I visited this place before? (Have/Has)
+	[text_input var="answer"]
+	if {answer} == "Have" or {answer} == "have":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	4)  ______ the taxi arrived at your house yet?
+	- Have
+		[signal arg="wrong"]
+	- Had
+		[signal arg="wrong"]
+	- Has
+		[signal arg="correct"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	4)  ______ Cindy taken the pills recently? (Have/Has)
+	[text_input var="answer"]
+	if {answer} == "Has" or {answer} == "has":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

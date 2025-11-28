@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Write question using the words in brackets!\
+	10)  Denis printed his photographs last Saturday. (When)
+	- When did Denis printed his photographs?
+		[signal arg="wrong"]
+	- When did Denis print his photographs?
+		[signal arg="correct"]
+	- When did Denis prints his photographs?
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the question with Simple Past using the words in brackets!\
+	10)  ______ ______ all the cows this morning? (Who milk)
+	[text_input var="answer"]
+	if {answer} == "Who milked" or {answer} == "who milked":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Write question using the words in brackets!\
+	10)  Mr. Bambang watched the news yesterday evening. (What)
+	- What did Mr. Bambang do yesterday evening?
+		[signal arg="correct"]
+	- What did Mr. Bambang did yesterday evening?
+		[signal arg="wrong"]
+	- What do Mr. Bambang did yesterday evening?
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the question with Simple Past using the words in brackets!\
+	10)  ______ ______ she finish her project about recycling? (Why do/not)
+	[text_input var="answer"]
+	if {answer} == "Why didn't" or {answer} == "Why didnt" or {answer} == "Why did not" or {answer} == "why didn't" or {answer} == "why didnt" or {answer} == "why did not" :
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Write question using the words in brackets!\
+	10)  The children visited the library every day. (How often)
+	- How often do the children visit the library?
+		[signal arg="wrong"]
+	- How often did the children visited the library?
+		[signal arg="wrong"]
+	- How often did the children visit the library?
+		[signal arg="correct"]
+elif {question} == 6:
+	Complete the question with Simple Past using the words in brackets!\
+	10)  ______ ______ the glass in the kitchen yesterday? (Who break)
+	[text_input var="answer"]
+	if {answer} == "Who broke" or {answer} == "who broke":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Write question using the words in brackets!\
+	10)  I telephoned Mrs. Garcia at 6 p.m. yesterday. (What time)
+	- What time didn't you telephone Mrs. Garcia yesterday?
+		[signal arg="wrong"]
+	- What time did you telephone Mrs. Garcia yesterday?
+		[signal arg="correct"]
+	- What time do you telephone Mrs. Garcia yesterday?
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the question with Simple Past using the words in brackets!\
+	10)  ______ ______ you so bitter about this issue? (What make)
+	[text_input var="answer"]
+	if {answer} == "What made" or {answer} == "what made":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Write question using the words in brackets!\
+	10)  Ray and Dono jumped on the sofa an hour ago. (What)
+	- What do Ray and Dono did an hour ago?
+		[signal arg="wrong"]
+	- What did Ray and Dono do an hour ago?
+		[signal arg="correct"]
+	- What did Ray and Dono did an hour ago?
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the question with Simple Past using the words in brackets!\
+	10)  ______ ______ the longest in the world? (Who sleep)
+	[text_input var="answer"]
+	if {answer} == "Who slept" or {answer} == "who slept":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

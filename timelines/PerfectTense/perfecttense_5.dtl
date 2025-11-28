@@ -1,0 +1,92 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence making them negative!\
+	5)  Junaedi has watched this action film before.
+	- Junaedi hasn’t watched this action film before. 
+		[signal arg="correct"]
+	- Junaedi has watched this action film before. 
+		[signal arg="wrong"]
+	- Junaedi haven’t watched this action film before. 
+		[signal arg="wrong"]
+elif {question} == 2:
+	Rewrite the sentence making them negative!\
+	5)  They have sold their old house in Purbalingga. 
+	- They hasn’t sold their old house in Purbalingga.
+		[signal arg="wrong"]
+	- They have sold their old house in Purbalingga.
+		[signal arg="wrong"]
+	- They haven't sold their old house in Purbalingga.
+		[signal arg="correct"]
+elif {question} == 3:
+	Rewrite the sentence making them negative!\
+	5)  His elder sister has passed all of her final exams. 
+	-  His elder sister haven't passes all her final exams.
+		[signal arg="wrong"]
+	- His elder sister hasn’t passed all her final exams.
+		[signal arg="correct"]
+	- His elder sister hasn’t passes all her final exams.
+		[signal arg="wrong"]
+elif {question} == 4:
+	Rewrite the sentence making them negative!\
+	5)  That young couple have bought a sports car.
+	- That young couple haven’t bought a sports car.
+		[signal arg="correct"]
+	- That young couple hasn't bought a sports car.
+		[signal arg="wrong"]
+	- That young couple have bought a sports car.
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence making them negative!\
+	5)  My classmates have cleaned the classroom this evening. 
+	-  My classmates have cleaned hide and seek there. 
+		[signal arg="wrong"]
+	-  My classmates haven’t cleaned hide and seek there. 
+		[signal arg="correct"]
+	-  My classmates hasn't cleaned hide and seek there. 
+		[signal arg="wrong"]
+elif {question} == 6:
+	Rewrite the sentence making them positive!\
+	5)  She hasn't finished her art project.
+	- She hasn't successfully finished her art project
+		[signal arg="wrong"]
+	- She has successfully finished her art project
+		[signal arg="correct"]
+	- She have successfully finished her art project
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence making them positive!\
+	5)  You haven't called me about our plans. 
+	- You have called me about our plans.
+		[signal arg="correct"]
+	- You has called me about our plans.
+		[signal arg="wrong"]
+	- You haven't called me about our plans.
+		[signal arg="wrong"]
+elif {question} == 8:
+	Rewrite the sentence making them positive!\
+	5)  The team hasn't won any matches this season.
+	- The team has win a match for this season.
+		[signal arg="wrong"]
+	- The team hasn't won a match for this season.
+		[signal arg="wrong"]
+	- The team has won a match for this season.
+		[signal arg="correct"]
+elif {question} == 9:
+	Rewrite the sentence making them positive!\
+	5)  We haven't eaten dinner together this week. 
+	- We has eaten a dinner together.
+		[signal arg="wrong"]
+	- We have eaten a dinner together.
+		[signal arg="correct"]
+	- We have ate a dinner together.
+		[signal arg="wrong"]
+elif {question} == 10:
+	Rewrite the sentence making them positive!\
+	5)  My uncle hasn't travelled to any new countries this year. 
+	- My uncle has travelling to a new country this year.
+		[signal arg="wrong"]
+	- My uncle have travelled to a new country this year
+		[signal arg="wrong"]
+	- My uncle has travelled to a new country this year
+		[signal arg="correct"]

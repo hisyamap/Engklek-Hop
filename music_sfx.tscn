@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://dtpvr27fcnnd"]
+
+[ext_resource type="Script" path="res://music_sfx.gd" id="1_gv12k"]
+[ext_resource type="AudioStream" uid="uid://dopu3a5iv5wmr" path="res://Assets/MusicSFX/Button Pressed Sound.wav" id="2_0xvev"]
+[ext_resource type="AudioStream" uid="uid://drnikl5mlgkp2" path="res://Assets/MusicSFX/Level Passed Sound.wav" id="3_lb2ml"]
+[ext_resource type="AudioStream" uid="uid://bswq0unhkuv87" path="res://Assets/MusicSFX/Game Lose Sound.wav" id="4_ptv23"]
+[ext_resource type="AudioStream" uid="uid://uemo38kj6m8i" path="res://Assets/MusicSFX/Gameover Sound.wav" id="5_vlkln"]
+[ext_resource type="AudioStream" uid="uid://bicjgp53qtuwn" path="res://Assets/MusicSFX/Engklek_Hop_Main_Theme.mp3" id="6_oxvqw"]
+[ext_resource type="AudioStream" uid="uid://bxmflo100unmv" path="res://Assets/MusicSFX/Correct-answer-thats-right.wav" id="7_c8i73"]
+[ext_resource type="AudioStream" uid="uid://r2byafn5l76y" path="res://Assets/MusicSFX/negativebeep.wav" id="8_hxrrm"]
+
+[node name="MusicSFX" type="Node"]
+process_mode = 3
+script = ExtResource("1_gv12k")
+
+[node name="ButtonPressedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_0xvev")
+bus = &"Sound"
+
+[node name="LevelPassedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lb2ml")
+volume_db = 2.0
+bus = &"Sound"
+
+[node name="GameLoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ptv23")
+volume_db = -2.0
+bus = &"Sound"
+
+[node name="GameoverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_vlkln")
+bus = &"Sound"
+
+[node name="MainThemeMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_oxvqw")
+bus = &"Music"
+
+[node name="CorrectAnswerSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_c8i73")
+volume_db = 5.0
+bus = &"Sound"
+
+[node name="WrongAnswerSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_hxrrm")
+volume_db = 8.0
+bus = &"Sound"

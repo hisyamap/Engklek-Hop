@@ -1,0 +1,155 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Engklek Hop"
+run/main_scene="res://main_menu.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/image="res://Assets/Loading Screen.png"
+config/icon="res://Assets/Game Icon.png"
+
+[autoload]
+
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://global.gd"
+MusicSfx="*res://music_sfx.tscn"
+
+[dialogic]
+
+directories/dch_directory={
+"Funfacts": "res://timelines/Funfacts.dch",
+"Swuks": "res://timelines/Swuks.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+}
+directories/dtl_directory={
+"continous_1": "res://timelines/ContinousTense/continous_1.dtl",
+"continous_10": "res://timelines/ContinousTense/continous_10.dtl",
+"continous_2": "res://timelines/ContinousTense/continous_2.dtl",
+"continous_3": "res://timelines/ContinousTense/continous_3.dtl",
+"continous_4": "res://timelines/ContinousTense/continous_4.dtl",
+"continous_5": "res://timelines/ContinousTense/continous_5.dtl",
+"continous_6": "res://timelines/ContinousTense/continous_6.dtl",
+"continous_7": "res://timelines/ContinousTense/continous_7.dtl",
+"continous_8": "res://timelines/ContinousTense/continous_8.dtl",
+"continous_9": "res://timelines/ContinousTense/continous_9.dtl",
+"funfact": "res://timelines/funfact.dtl",
+"loser": "res://timelines/loser.dtl",
+"pasttense_1": "res://timelines/PastTense/pasttense_1.dtl",
+"pasttense_10": "res://timelines/PastTense/pasttense_10.dtl",
+"pasttense_2": "res://timelines/PastTense/pasttense_2.dtl",
+"pasttense_3": "res://timelines/PastTense/pasttense_3.dtl",
+"pasttense_4": "res://timelines/PastTense/pasttense_4.dtl",
+"pasttense_5": "res://timelines/PastTense/pasttense_5.dtl",
+"pasttense_6": "res://timelines/PastTense/pasttense_6.dtl",
+"pasttense_7": "res://timelines/PastTense/pasttense_7.dtl",
+"pasttense_8": "res://timelines/PastTense/pasttense_8.dtl",
+"pasttense_9": "res://timelines/PastTense/pasttense_9.dtl",
+"perfecttense_1": "res://timelines/PerfectTense/perfecttense_1.dtl",
+"perfecttense_10": "res://timelines/PerfectTense/perfecttense_10.dtl",
+"perfecttense_2": "res://timelines/PerfectTense/perfecttense_2.dtl",
+"perfecttense_3": "res://timelines/PerfectTense/perfecttense_3.dtl",
+"perfecttense_4": "res://timelines/PerfectTense/perfecttense_4.dtl",
+"perfecttense_5": "res://timelines/PerfectTense/perfecttense_5.dtl",
+"perfecttense_6": "res://timelines/PerfectTense/perfecttense_6.dtl",
+"perfecttense_7": "res://timelines/PerfectTense/perfecttense_7.dtl",
+"perfecttense_8": "res://timelines/PerfectTense/perfecttense_8.dtl",
+"perfecttense_9": "res://timelines/PerfectTense/perfecttense_9.dtl",
+"questions_1": "res://timelines/questions_1.dtl",
+"questions_10": "res://timelines/questions_10.dtl",
+"questions_2": "res://timelines/questions_2.dtl",
+"questions_3": "res://timelines/questions_3.dtl",
+"questions_4": "res://timelines/questions_4.dtl",
+"questions_5": "res://timelines/questions_5.dtl",
+"questions_6": "res://timelines/questions_6.dtl",
+"questions_7": "res://timelines/questions_7.dtl",
+"questions_8": "res://timelines/questions_8.dtl",
+"questions_9": "res://timelines/questions_9.dtl",
+"tutorial": "res://timelines/tutorial.dtl",
+"winner": "res://timelines/winner.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://timelines/quiz_style.tres", "res://timelines/tutorial_style.tres"]
+layout/default_style="res://timelines/quiz_style.tres"
+variables={
+"answer": "",
+"question": 0
+}
+text/letter_speed=0.01
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+extensions_folder="res://addons/dialogic_additions"
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[input]
+
+onelegjump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+twolegsjump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+throwpickupgaco={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+pausegame={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

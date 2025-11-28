@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blanks with the correct answer!\
+	6)  Hey Supratno! Where ______ you ______ ?
+	- are, go
+		[signal arg="wrong"]
+	- are, going
+		[signal arg="correct"]
+	- is, going
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Present Continous!\
+	6)   I ______ (try) to read my book here. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "am trying":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blanks with the correct answer!\
+	6)  ______ Tina and Dani ______ their bicycles at the moment?
+	- Are, riding
+		[signal arg="correct"]
+	- Is, riding
+		[signal arg="wrong"]
+	- Are, ride
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Present Continous!\
+	6)  My two siblings ______ (plant) an cherry blossom tree. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are planting":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blanks with the correct answer!\
+	6)  ______ Kardi’s father ______ his truck in the front yard at the moment?
+	- Are, washing
+		[signal arg="wrong"]
+	- Is, washing
+		[signal arg="correct"]
+	- Am, washing
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Continous!\
+	6)   Sir, a woman ______ (wait) for you in the lobby. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is waiting":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blanks with the correct answer!\
+	6)  ______ your brother ______ (mow) the lawn now?
+	- Is, mowing
+		[signal arg="correct"]
+	- Are, mowing
+		[signal arg="wrong"]
+	- Is, moweing
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Present Continous!\
+	6)   Who ______ (vacuum) the floor right now? (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is vacuuming":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blanks with the correct answer!\
+	6)  What ______ your parents ______ at the cinema now?
+	- are, watch
+		[signal arg="wrong"]
+	- is, watching
+		[signal arg="wrong"]
+	- are, watching
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Present Continous!\
+	6)  I ______ (make) a tower with my wooden blocks (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "am making":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

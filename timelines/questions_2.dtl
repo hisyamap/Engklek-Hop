@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	2)  Anton _______ late to the class.
+	- is
+		[signal arg="correct"]
+	- are
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	2)  Tono _______ thristy. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	2)  This area ______ full of wildlife.
+	- is
+		[signal arg="correct"]
+	- are
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	2)  Timi and Joko _______ my good friends. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	2)  Jojo and Sinta _______ hungry.
+	- is
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	2)  My mother _______ in the garden. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	2)  You _______ a student.
+	- is
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	2)  Emily _______ my sister. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	2)  My father _______ on the bus.
+	- is
+		[signal arg="correct"]
+	- are
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	2)  My brother _______ a teacher. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

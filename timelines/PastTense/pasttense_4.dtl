@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	4)  I ______ there for two years.
+	- live
+		[signal arg="wrong"]
+	- lives
+		[signal arg="wrong"]
+	- lived
+		[signal arg="correct"]
+elif {question} == 2:
+	Complete the following sentence using Simple Past!\
+	4)  The breeder ______ (borrow) an incubator to hatch a dozen eggs.
+	[text_input var="answer"]
+	if {answer} == "borrowed":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	4)  Tono was ______ just as they had seen him
+	- dressing
+		[signal arg="wrong"]
+	- dressed
+		[signal arg="correct"]
+	- dresses
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Simple Past!\
+	4)  He ______ (jump) up at the sound of her light step.
+	[text_input var="answer"]
+	if {answer} == "jumped":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	4)  The officer ______ for evidence till six o'clock in the evening.
+	- searched
+		[signal arg="correct"]
+	- search
+		[signal arg="wrong"]
+	- searches
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Simple Past!\
+	4)  I guess she just ______ (want) to say goodbye.
+	[text_input var="answer"]
+	if {answer} == "wanted":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	4)  Yesterday I _____ to her the story of "Lutung Kasarung".
+	- reads
+		[signal arg="wrong"]
+	- readed
+		[signal arg="wrong"]
+	- read
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Simple Past!\
+	4)  Their food _____ (consist) mainly of cooked fish.
+	[text_input var="answer"]
+	if {answer} == "consisted":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	4)  The two of them ______ soccer almost every night.
+	- play
+		[signal arg="wrong"]
+	- played
+		[signal arg="correct"]
+	- plays
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the following sentence using Simple Past!\
+	4)  They ______ (finish) the snack in silence.
+	[text_input var="answer"]
+	if {answer} == "finished":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

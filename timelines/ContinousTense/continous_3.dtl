@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	3)  I ______ doing homework today.
+	- am not
+		[signal arg="correct"]
+	- isn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	3)  The day ______ getting any longer. (am not/isn't/aren't)
+	[text_input var="answer"]
+	if {answer} == "isn't" or {answer} == "is not" or {answer} == "isnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	3)  We ______ putting a lot of trust in him.
+	- am not
+		[signal arg="wrong"]
+	- isn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	3)  No, you ______ apologizing for her. (am not/isn't/aren't)
+	[text_input var="answer"]
+	if {answer} == "aren't" or {answer} == "are not" or {answer} == "arent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	3)  For the last time, Gebian ______ interested in me.
+	- am not
+		[signal arg="wrong"]
+	- isn't
+		[signal arg="correct"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	3)  I ______ recording my screen right now. (am not/isn't/aren't)
+	[text_input var="answer"]
+	if {answer} == "am not":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	3)  My friend and my sister ______ laughing to the comedy show tonight.
+	- am not
+		[signal arg="wrong"]
+	- isn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="correct"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	3)  It ______ troubling me at the moment. (am not/isn't/aren't)
+	[text_input var="answer"]
+	if {answer} == "isn't" or {answer} == "is not" or {answer} == "isnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	3)  Your sister ______ seeking medical treatment for now.
+	- am not
+		[signal arg="wrong"]
+	- isn't
+		[signal arg="correct"]
+	- aren't
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	3)  These men ______ wearing a suit for the meeting. (am not/isn't/aren't)
+	[text_input var="answer"]
+	if {answer} == "aren't" or {answer} == "are not" or {answer} == "arent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

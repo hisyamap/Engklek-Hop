@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	3)  It ______ an easy decision.
+	- wasn't
+		[signal arg="correct"]
+	- weren't
+		[signal arg="wrong"]
+	- didn't
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	3)  Putri ______ the only one awaiting her arrival. (wasn't/weren't/didn't)
+	[text_input var="answer"]
+	if {answer} == "wasn't" or {answer} == "was not" or {answer} == "wasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	3)  You ______ exactly friendly.
+	- wasn't
+		[signal arg="wrong"]
+	- weren't
+		[signal arg="correct"]
+	- didn't
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	3)  If they ______, we would keep the money. (wasn't/weren't/didn't)
+	[text_input var="answer"]
+	if {answer} == "weren't" or {answer} == "were not" or {answer} == "werent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	3)  There ______ many candidates fitting that description.
+	- wasn't
+		[signal arg="wrong"]
+	- weren't
+		[signal arg="correct"]
+	- didn't
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	3)  I ______ know you felt that way. (wasn't/weren't/didn't)
+	[text_input var="answer"]
+	if {answer} == "didn't" or {answer} == "did not" or {answer} == "didnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	3)  The suitcase ______ seem that heavy at the time.
+	- wasn't
+		[signal arg="wrong"]
+	- weren't
+		[signal arg="wrong"]
+	- didn't
+		[signal arg="correct"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	3)  She ______ going to be able to sleep any more. (wasn't/weren't/didn't)
+	[text_input var="answer"]
+	if {answer} == "wasn't" or {answer} == "was not" or {answer} == "wasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	3)  Maybe a housekeeper ______ what he had planned on hiring.
+	- wasn't
+		[signal arg="correct"]
+	- weren't
+		[signal arg="wrong"]
+	- didn't
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	3)  As long as they ______ disrupting the household. (wasn't/weren't/didn't)
+	[text_input var="answer"]
+	if {answer} == "weren't" or {answer} == "were not" or {answer} == "werent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

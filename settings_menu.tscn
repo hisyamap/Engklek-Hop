@@ -1,0 +1,157 @@
+[gd_scene load_steps=17 format=3 uid="uid://c8mmobimsfrht"]
+
+[ext_resource type="Texture2D" uid="uid://sraxmyncksjn" path="res://Assets/Settings.png" id="1_1vows"]
+[ext_resource type="Script" path="res://settings_menu.gd" id="1_rv7x7"]
+[ext_resource type="Texture2D" uid="uid://c80fktfnjgs8r" path="res://Assets/Back Button.png" id="2_pea3i"]
+[ext_resource type="Texture2D" uid="uid://bv2yerpwyl2cm" path="res://Assets/Volume Bar Bg.png" id="4_ha7ua"]
+[ext_resource type="Texture2D" uid="uid://hhn8o5qnpexo" path="res://Assets/Volume Bar Fill.png" id="5_p3c6a"]
+[ext_resource type="Texture2D" uid="uid://cfotrnowyi15s" path="res://Assets/Volume Checked.png" id="6_8of24"]
+[ext_resource type="Texture2D" uid="uid://cttuxwvp5m8sd" path="res://Assets/Volume Unchecked.png" id="7_f8c1n"]
+[ext_resource type="Texture2D" uid="uid://04di5ywov1k" path="res://Assets/Volume Grabber.png" id="8_tti16"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nnma"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_854wc"]
+texture = ExtResource("4_ha7ua")
+expand_margin_top = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxvm4"]
+texture = ExtResource("5_p3c6a")
+expand_margin_top = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a43h8"]
+texture = ExtResource("5_p3c6a")
+expand_margin_top = 15.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqm32"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwwng"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmt6i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkaip"]
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rv7x7")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_1vows")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -189.5
+offset_top = -180.0
+offset_right = 189.5
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2nnma")
+icon = ExtResource("2_pea3i")
+flat = true
+icon_alignment = 1
+
+[node name="MusicBar" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -150.0
+offset_right = 201.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/center_grabber = 0
+theme_override_icons/grabber = ExtResource("8_tti16")
+theme_override_icons/grabber_highlight = ExtResource("8_tti16")
+theme_override_styles/slider = SubResource("StyleBoxTexture_854wc")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_cxvm4")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_a43h8")
+max_value = 1.0
+step = 0.05
+
+[node name="SoundBar" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.0
+offset_top = -41.0
+offset_right = 201.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/center_grabber = 0
+theme_override_icons/grabber = ExtResource("8_tti16")
+theme_override_icons/grabber_highlight = ExtResource("8_tti16")
+theme_override_styles/slider = SubResource("StyleBoxTexture_854wc")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_cxvm4")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_a43h8")
+max_value = 1.0
+step = 0.05
+
+[node name="MuteMusic" type="CheckBox" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = 36.0
+offset_right = 204.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gqm32")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vwwng")
+theme_override_icons/checked = ExtResource("6_8of24")
+theme_override_icons/unchecked = ExtResource("7_f8c1n")
+
+[node name="MuteSound" type="CheckBox" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 148.0
+offset_top = 101.0
+offset_right = 204.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fmt6i")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_nkaip")
+theme_override_icons/checked = ExtResource("6_8of24")
+theme_override_icons/unchecked = ExtResource("7_f8c1n")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="MusicBar" to="." method="_on_music_bar_value_changed"]
+[connection signal="value_changed" from="SoundBar" to="." method="_on_sound_bar_value_changed"]
+[connection signal="toggled" from="MuteMusic" to="." method="_on_mute_music_toggled"]
+[connection signal="toggled" from="MuteSound" to="." method="_on_mute_sound_toggled"]

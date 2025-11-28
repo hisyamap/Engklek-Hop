@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	1)  He _______ only twelve years old last year.
+	- was
+		[signal arg="correct"]
+	- were
+		[signal arg="wrong"]
+	- did
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	1)  I ______ the best player on the team last season. (was/were)
+	[text_input var="answer"]
+	if {answer} == "was":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	1)  They ______ at the hospital last weekend.
+	- was
+		[signal arg="wrong"]
+	- were
+		[signal arg="correct"]
+	- did
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	1)  We ______ at the tennis court two hours ago. (was/were)
+	[text_input var="answer"]
+	if {answer} == "were":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	1)  She ______ a great teacher.
+	- was
+		[signal arg="correct"]
+	- were
+		[signal arg="wrong"]
+	- did
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	1)  We ______ all together. (was/were)
+	[text_input var="answer"]
+	if {answer} == "were":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	1)  It ______ the earthquake.
+	- was
+		[signal arg="correct"]
+	- were
+		[signal arg="wrong"]
+	- did
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	1)  I ______ born in Jakarta. (was/were)
+	[text_input var="answer"]
+	if {answer} == "was":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	1)  No wonder he ______ so upset.
+	- was
+		[signal arg="correct"]
+	- were
+		[signal arg="wrong"]
+	- did
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	1)  You ______ desperate and you made a mistake. (was/were)
+	[text_input var="answer"]
+	if {answer} == "were":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

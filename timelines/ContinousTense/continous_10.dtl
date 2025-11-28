@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blanks with the correct answer!\
+	10)  Elias ______ ______ a shower when the electricity went off this morning.
+	- was takeing
+		[signal arg="wrong"]
+	- was taking
+		[signal arg="correct"]
+	- were taking
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with Past Continous using the words in brackets!\
+	10)  Mr. Supratno ______ (repair) a watch when I went into his shop. (was/were)
+	[text_input var="answer"]
+	if {answer} == "was repairing":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blanks with the correct answer!\
+	10)  Who ______ you ______ (talk) with when I met you yesterday?
+	- were talking
+		[signal arg="correct"]
+	- was talking
+		[signal arg="wrong"]
+	- are talking
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with Past Continous using the words in brackets!\
+	10)  It ______ (rain) outside when we left home. (was/were)
+	[text_input var="answer"]
+	if {answer} == "was raining":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	10)  I was very scared tonight because I thought a man ______ me.
+	- were following
+		[signal arg="wrong"]
+	- were follow
+		[signal arg="wrong"]
+	- was following
+		[signal arg="correct"]
+elif {question} == 6:
+	Fill in the blank with Past Continous using the words in brackets!\
+	10)  His sons ______ (swing) in the playground when it suddenly raining (was/were)
+	[text_input var="answer"]
+	if {answer} == "were swinging":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blanks with the correct answer!\
+	10)  ______ your grandma ______ a nap on the sofa a few hours ago?
+	- Were, taking
+		[signal arg="wrong"]
+	- Was, taking
+		[signal arg="correct"]
+	- Is, taking
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with Past Continous using the words in brackets!\
+	10)  My parents ______ (prepare) breakfast at about 7 am this morning. (was/were)
+	[text_input var="answer"]
+	if {answer} == "were preparing":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blanks with the correct answer!\
+	10)  We ______ ______ on the beach when a shark appeared on the shore.
+	- was, sunbath
+		[signal arg="wrong"]
+	- were, sunbatheing
+		[signal arg="wrong"]
+	- were, sunbathing
+		[signal arg="correct"]
+elif {question} == 10:
+	Fill in the blank with Past Continous using the words in brackets!\
+	10)  My grandparents ______ (feed) the birds when the earthquake happened. (was/were)
+	[text_input var="answer"]
+	if {answer} == "were feeding":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

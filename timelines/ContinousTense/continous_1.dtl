@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	1)  He ______ walking to school with his friends.
+	- is
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	1)  They ______ looking for a good restaurant. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	1)  We ______ getting dressed for the wedding.
+	- is
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	1)  I ______ playing a video game at the moment. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "am":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	1)  They ______ helping their father wash the car.
+	- is
+		[signal arg="wrong"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="correct"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	1)  She ______ coming for me to take me there. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	1)  I _____ preparing a project for the science class at the moment.
+	- is
+		[signal arg="wrong"]
+	- am
+		[signal arg="correct"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	1)  We ______ staying the whole evening. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	1)  it ______ following me through the hallway.
+	- is
+		[signal arg="correct"]
+	- am
+		[signal arg="wrong"]
+	- are
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	1)  It ______ getting close to supper. (is/am/are)
+	[text_input var="answer"]
+	if {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	7)  My cousin, Justin ______ ______ twelve pine trees in the forest
+	- have planted
+		[signal arg="wrong"]
+	- has planted
+		[signal arg="correct"]
+	- has planting
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Present Perfect!\
+	7)  My parents ______ ______ (stay) at a hotel in Bali since last weekend. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have stayed":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	7)  Heri and Javier ______ ______ the police for the car accident. 
+	- have call
+		[signal arg="wrong"]
+	- has called
+		[signal arg="wrong"]
+	- have called
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following sentence using Present Perfect!\
+	7)  The company ______ ______ (achieve) its sales targets. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has achieved":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	7)  Nobody ______ ever ______ that to me before.
+	- has, said
+		[signal arg="correct"]
+	- have, said
+		[signal arg="wrong"]
+	- have, say
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Perfect!\
+	7)  They ______ (watch) all the episodes of this series since June. (have/has)
+	[text_input var="answer"]
+	if {answer} == "have watched":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	7)  I ______ never ______ a more perfectly grilled chicken breast.
+	- has, tasted
+		[signal arg="wrong"]
+	- have, tasten
+		[signal arg="wrong"]
+	- have, tasted
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Present Perfect!\
+	7)  It ______ ______ everyday for the past six days. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has rained":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	7)  A tourist guide ______ ______ them since the first day of their tour.
+	- have, accompanyed
+		[signal arg="wrong"]
+	- has, accompany
+		[signal arg="wrong"]
+	- has, accompanied
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Present Perfect!\
+	7)  The building ______ ______ (serve) as the communal library since 1838. (have/has)
+	[text_input var="answer"]
+	if {answer} == "has served":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

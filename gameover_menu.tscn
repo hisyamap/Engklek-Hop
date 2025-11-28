@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqw2lq6rlo0hh"]
+
+[ext_resource type="Script" path="res://gameover_menu.gd" id="1_irqvg"]
+[ext_resource type="Texture2D" uid="uid://cvo581dtf0jkb" path="res://Assets/Game Scene Type 1.png" id="1_qb03s"]
+[ext_resource type="Texture2D" uid="uid://d12y83eqlgkw7" path="res://Assets/Restart Button.png" id="1_sshcx"]
+[ext_resource type="Texture2D" uid="uid://bj3ifjnmvd8d7" path="res://Assets/You Lose.png" id="2_gi73f"]
+[ext_resource type="Texture2D" uid="uid://bgi1277cjir1q" path="res://Assets/MainMenu Button.png" id="2_s3f2t"]
+[ext_resource type="FontFile" uid="uid://dvrn08fvin7tu" path="res://Assets/RobotoCondensed-BlackItalic.ttf" id="6_knwtm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5aei"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fb22g"]
+
+[node name="GameoverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_irqvg")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="Backgrond" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qb03s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.423529)
+
+[node name="YouLose" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_top = 150.0
+offset_right = 192.0
+offset_bottom = 221.0
+grow_horizontal = 2
+texture = ExtResource("2_gi73f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -76.5
+offset_right = 189.5
+offset_bottom = 221.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="CurrentScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_knwtm")
+theme_override_font_sizes/font_size = 40
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.450648, 0.450648, 0.450648, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w5aei")
+icon = ExtResource("1_sshcx")
+flat = true
+
+[node name="MainmenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fb22g")
+icon = ExtResource("2_s3f2t")
+flat = true
+
+[node name="HighScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_knwtm")
+theme_override_font_sizes/font_size = 40
+text = "HIGHSCORE: 0"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 450.5
+offset_top = 620.0
+offset_right = 829.5
+offset_bottom = 691.0
+theme_override_constants/separation = 5
+
+[node name="Reason_English" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_knwtm")
+theme_override_font_sizes/font_size = 28
+text = "
+"
+horizontal_alignment = 1
+
+[node name="Reason_Indo" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_knwtm")
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

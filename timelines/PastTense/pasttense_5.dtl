@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	5)  ______ Lia and Putri friends last year?
+	- Was 
+		[signal arg="wrong"]
+	- Were
+		[signal arg="correct"]
+	- Did
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	5)  ______ Mrs. Susi in her garden this morning? (Was/Were/Did)
+	[text_input var="answer"]
+	if {answer} == "Was" or {answer} == "was":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	5)  ______ there any milk in the fridge yesterday?
+	- Was 
+		[signal arg="correct"]
+	- Were
+		[signal arg="wrong"]
+	- Did
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	5)  ______ you tell him how it makes you feel? (Was/Were/Did)
+	[text_input var="answer"]
+	if {answer} == "Did" or {answer} == "did":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	5)  ______ I give Hisyam his fair share of attention?
+	- Was 
+		[signal arg="wrong"]
+	- Were
+		[signal arg="wrong"]
+	- Did
+		[signal arg="correct"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	5)  ______ it another attempt to approach her? (Was/Were/Did)
+	[text_input var="answer"]
+	if {answer} == "Was" or {answer} == "was":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	5)  ______ that what they had been arguing about?
+	- Was 
+		[signal arg="correct"]
+	- Were
+		[signal arg="wrong"]
+	- Did
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	5)  ______ you call my accountant? (Was/Were/Did)
+	[text_input var="answer"]
+	if {answer} == "Did" or {answer} == "did":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	5)  ______ he overhear her conversation with Dina?
+	- Was 
+		[signal arg="wrong"]
+	- Were
+		[signal arg="wrong"]
+	- Did
+		[signal arg="correct"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	5)  ______ the kids still following? (Was/Were/Did)
+	[text_input var="answer"]
+	if {answer} == "Were" or {answer} == "were":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

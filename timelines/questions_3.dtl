@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	3)  _______ you study English everynight?
+	- Do 
+		[signal arg="correct"]
+	- Does
+		[signal arg="wrong"]
+	- Are
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	3)  _______ you love playing football? (Do/Does)
+	[text_input var="answer"]
+	if {answer} == "Do" or {answer} == "do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	3)  _______ she have any coloured pencil?
+	- Do 
+		[signal arg="wrong"]
+	- Does
+		[signal arg="correct"]
+	- Are
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	3)  _______ your father work in the office? (Do/Does)
+	[text_input var="answer"]
+	if {answer} == "Does" or {answer} == "does":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	3)  _______ he speak English?
+	- Do 
+		[signal arg="wrong"]
+	- Does
+		[signal arg="correct"]
+	- Are
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	3)  _______ he like coffee? (Do/Does)
+	[text_input var="answer"]
+	if {answer} == "Does" or {answer} == "does":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	3)  _______ you have any pets?
+	- Do 
+		[signal arg="correct"]
+	- Does
+		[signal arg="wrong"]
+	- Are
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	3)  _______ they brush their teeth? (Do/Does)
+	[text_input var="answer"]
+	if {answer} == "Do" or {answer} == "do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	3)  _______ we have any cheese in the fridge?
+	- Do 
+		[signal arg="correct"]
+	- Does
+		[signal arg="wrong"]
+	- Are
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	3)  _______ Mr.Bambang drive to work? (Do/Does)
+	[text_input var="answer"]
+	if {answer} == "Does" or {answer} == "does":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

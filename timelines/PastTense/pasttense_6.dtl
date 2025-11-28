@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blanks with the correct answer!\
+	6)  He ______ care if he only ______ his board.
+	- did, earn
+		[signal arg="wrong"]
+	- didn't, earned
+		[signal arg="correct"]
+	- did't, earn
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blank with was, wasn’t, were, weren’t!\
+	6)  The central and largest one ______ white, and reminded her of the sun.
+	[text_input var="answer"]
+	if {answer} == "was":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blanks with the correct answer!\
+	6)  Brian ______ seem to notice, so maybe he ______ them that way.
+	- did, treated
+		[signal arg="wrong"]
+	- didn't, treat
+		[signal arg="wrong"]
+	- didn't, treated
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blank with was, wasn’t, were, weren’t!\
+	6)   I'm sure you feel guilty, but it's fortunate that you ______ with them.
+	[text_input var="answer"]
+	if {answer} == "weren't" or {answer} == "were not" or {answer} == "werent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blanks with the correct answer!\
+	6)  In fact, he'd probably be ______ to know he slipped and ______ it now.
+	- horrified, did
+		[signal arg="correct"]
+	- horrified, didn't
+		[signal arg="wrong"]
+	- horrify, did
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with was, wasn’t, were, weren’t!\
+	6)  Communicating feelings with Budi ______ always easy.
+	[text_input var="answer"]
+	if {answer} == "wasn't" or {answer} == "was not" or {answer} == "wasnt":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blanks with the correct answer!\
+	6)  Those people when they ______ some tricks on a policeman, ______ they do it together?
+	- play, did
+		[signal arg="wrong"]
+	- play, didn't
+		[signal arg="wrong"]
+	- played, didn't
+		[signal arg="correct"]
+elif {question} == 8:
+	Fill in the blank with was, wasn’t, were, weren’t!\
+	6)   Here is another person descended from the air to prove you ______ wrong.
+	[text_input var="answer"]
+	if {answer} == "were":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blanks with the correct answer!\
+	6)  ______ he know she ______ on them?
+	- Didn't, spy
+		[signal arg="wrong"]
+	- Did, spied
+		[signal arg="correct"]
+	- Didn't, spied
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with was, wasn’t, were, weren’t!\
+	6)   Lina and her classmates ______ at the park yesterday.
+	[text_input var="answer"]
+	if {answer} == "weren't" or {answer} == "were not" or {answer} == "werent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=16 format=3 uid="uid://tuw4e66wbhuh"]
+
+[ext_resource type="Script" path="res://multiplayer.gd" id="1_bldkn"]
+[ext_resource type="PackedScene" uid="uid://kh52hvttlli3" path="res://level_type_1.tscn" id="1_uflff"]
+[ext_resource type="Script" path="res://turn_manager.gd" id="2_7d3bo"]
+[ext_resource type="PackedScene" uid="uid://bigyo7ptmnjkp" path="res://gaco.tscn" id="3_bts1k"]
+[ext_resource type="PackedScene" uid="uid://c1kqhhyr3g55o" path="res://player1.tscn" id="3_kcdtl"]
+[ext_resource type="PackedScene" uid="uid://cdxw7lpd1rrl6" path="res://player2.tscn" id="4_axvod"]
+[ext_resource type="PackedScene" uid="uid://bs52d0ehmwcnt" path="res://quiz_system.tscn" id="4_weyje"]
+[ext_resource type="PackedScene" uid="uid://b8lwmi4be75qe" path="res://player3.tscn" id="5_5m5mo"]
+[ext_resource type="PackedScene" uid="uid://bhlb7o6kvgqu4" path="res://game_ui.tscn" id="5_i6sn4"]
+[ext_resource type="PackedScene" uid="uid://de81vigbrtars" path="res://level_passed_menu.tscn" id="6_d77sa"]
+[ext_resource type="PackedScene" uid="uid://b7ljy3x3bjcli" path="res://player4.tscn" id="6_lmuh4"]
+[ext_resource type="PackedScene" uid="uid://grtj5g66505o" path="res://player_lose.tscn" id="11_l2gq0"]
+[ext_resource type="PackedScene" uid="uid://c2oe6dh3cur7x" path="res://confirmation_menu.tscn" id="11_u0vdm"]
+[ext_resource type="AudioStream" uid="uid://wi7t3lepepcy" path="res://Assets/MusicSFX/Engklek_Hop_Gameplay_Music.mp3" id="14_c00y2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kct1"]
+size = Vector2(29.5, 20)
+
+[node name="Multiplayer" type="Node2D"]
+script = ExtResource("1_bldkn")
+
+[node name="LevelType1" parent="." instance=ExtResource("1_uflff")]
+unique_name_in_owner = true
+z_index = -1
+
+[node name="TurnManager" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(160, 384)
+script = ExtResource("2_7d3bo")
+
+[node name="Player1" parent="TurnManager" instance=ExtResource("3_kcdtl")]
+unique_name_in_owner = true
+process_mode = 4
+z_index = 1
+
+[node name="Player2" parent="TurnManager" instance=ExtResource("4_axvod")]
+unique_name_in_owner = true
+process_mode = 4
+visible = false
+z_index = 1
+
+[node name="Player3" parent="TurnManager" instance=ExtResource("5_5m5mo")]
+unique_name_in_owner = true
+process_mode = 4
+visible = false
+z_index = 1
+
+[node name="Player4" parent="TurnManager" instance=ExtResource("6_lmuh4")]
+unique_name_in_owner = true
+process_mode = 4
+visible = false
+z_index = 1
+
+[node name="Gaco" parent="." instance=ExtResource("3_bts1k")]
+unique_name_in_owner = true
+position = Vector2(209, 398)
+
+[node name="Platform" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(209, 418)
+shape = SubResource("RectangleShape2D_3kct1")
+
+[node name="QuizSystem" parent="." instance=ExtResource("4_weyje")]
+unique_name_in_owner = true
+
+[node name="GameUI" parent="." instance=ExtResource("5_i6sn4")]
+unique_name_in_owner = true
+
+[node name="MenuCanvas" type="CanvasLayer" parent="."]
+
+[node name="ConfirmationMenu" parent="MenuCanvas" instance=ExtResource("11_u0vdm")]
+process_mode = 3
+visible = false
+
+[node name="PlayerLose" parent="MenuCanvas" instance=ExtResource("11_l2gq0")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+
+[node name="LevelPassedMenu" parent="MenuCanvas" instance=ExtResource("6_d77sa")]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+
+[node name="GameplayMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_c00y2")
+bus = &"Music"

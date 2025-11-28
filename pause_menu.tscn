@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://csqkphc4b1x1p"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_pxhbo"]
+[ext_resource type="Texture2D" uid="uid://b0ta4c3jsulbx" path="res://Assets/Paused.png" id="2_peelt"]
+[ext_resource type="Texture2D" uid="uid://cfblwodv8gl5u" path="res://Assets/Resume Button.png" id="3_sthh5"]
+[ext_resource type="Texture2D" uid="uid://d12y83eqlgkw7" path="res://Assets/Restart Button.png" id="4_g6w65"]
+[ext_resource type="Texture2D" uid="uid://bgi1277cjir1q" path="res://Assets/MainMenu Button.png" id="5_3vvbj"]
+
+[sub_resource type="Theme" id="Theme_3cole"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7o77"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohuw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrcnu"]
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pxhbo")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.270588)
+
+[node name="Title" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 496.0
+offset_top = 120.0
+offset_right = 781.0
+offset_bottom = 189.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_peelt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -60.0
+offset_right = 189.5
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_3cole")
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7o77")
+icon = ExtResource("3_sthh5")
+flat = true
+icon_alignment = 1
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.450648, 0.450648, 0.450648, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohuw2")
+icon = ExtResource("4_g6w65")
+flat = true
+
+[node name="MainmenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yrcnu")
+icon = ExtResource("5_3vvbj")
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

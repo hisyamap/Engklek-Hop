@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	6)  This old building has ______ here for about three hundred years.
+	- stand
+		[signal arg="wrong"]
+	- standed
+		[signal arg="wrong"]
+	- stood
+		[signal arg="correct"]
+elif {question} == 2:
+	Complete the following sentence using Present Perfect!\
+	6)  My neighbour has ______ (paint) their fence recently.
+	[text_input var="answer"]
+	if {answer} == "painted":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	6)  Putri and Rina have ______ this novel four times before
+	- readed
+		[signal arg="wrong"]
+	- read
+		[signal arg="correct"]
+	- reads
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Present Perfect!\
+	6)  The police officer has ______ (question) all the bank staff.
+	[text_input var="answer"]
+	if {answer} == "questioned":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	6)  Tono has already ______ dinner with his brother.
+	- eaten
+		[signal arg="correct"]
+	- ate
+		[signal arg="wrong"]
+	- eated
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Perfect!\
+	6)  Your grandma has _______ (bake) the strawberry cake.
+	[text_input var="answer"]
+	if {answer} == "baked":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	6)  Our dog, Bruno has ______ the water from the cup.
+	- drink
+		[signal arg="wrong"]
+	- drank
+		[signal arg="wrong"]
+	- drunk
+		[signal arg="correct"]
+elif {question} == 8:
+	Complete the following sentence using Present Perfect!\
+	6)  We have ______ (receive) a strange letter from the mysterious man.
+	[text_input var="answer"]
+	if {answer} == "received":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	6)  My parents have ______ a lot of money from the lottery
+	- win
+		[signal arg="wrong"]
+	- won 
+		[signal arg="correct"]
+	- wan
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the following sentence using Present Perfect!\
+	6) My grandmother has ______ (buy) some new furniture for her house.
+	[text_input var="answer"]
+	if {answer} == "bought":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

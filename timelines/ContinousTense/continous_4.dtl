@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	4)  My heart is ______ for joy this morning.
+	- sing
+		[signal arg="wrong"]
+	- sings
+		[signal arg="wrong"]
+	- singing
+		[signal arg="correct"]
+elif {question} == 2:
+	Complete the following sentence using Present Continous!\
+	4)  We are ______ (eat) hamburgers here in the dining room
+	[text_input var="answer"]
+	if {answer} == "eating":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	4)  Kania is ______ her dog at the park.
+	- walk
+		[signal arg="wrong"] 
+	- walking
+		[signal arg="correct"]
+	- walling
+		[signal arg="wrong"] 
+elif {question} == 4:
+	Complete the following sentence using Present Continous!\
+	4)  The warm sun is ______ (shine) on us.
+	[text_input var="answer"]
+	if {answer} == "shining":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	4)  The kids are ______ the lego pieces into a house. 
+	- combining
+		[signal arg="correct"]
+	- combineing
+		[signal arg="wrong"]
+	- combine
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Present Continous!\
+	4)  The poet is ______ (write) funny poems.
+	[text_input var="answer"]
+	if {answer} == "writing":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	4)  I am not ______ (quarrel) with you about the succession.
+	- quarrel
+		[signal arg="wrong"]
+	- quarrelling
+		[signal arg="correct"]
+	- quarreling
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Present Continous!\
+	4)  She is ______ (buy) milk for her cat.
+	[text_input var="answer"]
+	if {answer} == "buying":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	4)  It is ______ outside and I'm still sweltering.
+	- rainieng
+		[signal arg="wrong"]
+	- rain
+		[signal arg="wrong"]
+	- raining
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Present Continous!\
+	4)  Joko and his mother are ______ (shop) in that supermarket. 
+	[text_input var="answer"]
+	if {answer} == "shopping":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

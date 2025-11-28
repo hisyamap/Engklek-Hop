@@ -1,0 +1,92 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence making them negative!\
+	9)  Isna watched a film at 10 p.m. last night. 
+	- Isna didn’t watch a film at 10 p.m. last night
+		[signal arg="correct"]
+	- Isna didn’t watched a film at 10 p.m. last night
+		[signal arg="wrong"]
+	- Isna did watch a film at 10 p.m. last night
+		[signal arg="wrong"]
+elif {question} == 2:
+	Rewrite the sentence making them positive!\
+	9)  Sifa didn’t wait for his friends this morning.
+	- Sifa did wait for his friends this morning.
+		[signal arg="wrong"]
+	- Sifa waited for his friends this morning.
+		[signal arg="correct"]
+	- Sifa did waited for his friends this morning.
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence making them negative!\
+	9)  My classmates answered all the questions. 
+	- My classmates didn’t answered all the questions.
+		[signal arg="wrong"]
+	- My classmates answered all the questions.
+		[signal arg="wrong"]
+	- My classmates didn’t answer all the questions.
+		[signal arg="correct"]
+elif {question} == 4:
+	Rewrite the sentence making them positive!\
+	9)  The students didn’t learn Japanese last year.  
+	- The students learn Japanese last year.
+		[signal arg="wrong"]
+	- The students did learn Japanese last year.
+		[signal arg="wrong"]
+	- The students learned Japanese last year.
+		[signal arg="correct"]
+elif {question} == 5:
+	Rewrite the sentence making them negative!\
+	9)  She talked to her English teacher five days ago. 
+	- She didn’t talked to her English teacher five days ago.
+		[signal arg="wrong"]
+	- She didn’t talk to her English teacher five days ago.
+		[signal arg="correct"]
+	- She didn’t talks to her English teacher five days ago.
+		[signal arg="wrong"]
+elif {question} == 6:
+	Rewrite the sentence making them positive!\
+	9)  My mother didn’t clean the kitchen yesterday.
+	- My mother cleaned the kitchen yesterday.
+		[signal arg="correct"]
+	- My mother did clean the kitchen yesterday.
+		[signal arg="wrong"]
+	- My mother did cleaned the kitchen yesterday.
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence making them negative!\
+	9)  Farhan brushed his teeth before breakfast today. 
+	- Farhan didn’t brush his teeth before breakfast today.
+		[signal arg="correct"]
+	- Farhan didn’t brushed his teeth before breakfast today.
+		[signal arg="wrong"]
+	- Farhan did brush his teeth before breakfast today.
+		[signal arg="wrong"]
+elif {question} == 8:
+	Rewrite the sentence making them positive!\
+	9)  Mr. Herman didn’t arrive home before dinner. 
+	- Mr. Herman did arrived home before dinner.
+		[signal arg="wrong"]
+	- Mr. Herman arrive home before dinner.
+		[signal arg="wrong"]
+	- Mr. Herman arrived home before dinner.
+		[signal arg="correct"]
+elif {question} == 9:
+	Rewrite the sentence making them negative!\
+	9)  Yasmin and Putri cycled to school yesterday. 
+	- Yasmin and Putri didn’t cycled to school yesterday.
+		[signal arg="wrong"]
+	- Yasmin and Putri didn’t cycle to school yesterday.
+		[signal arg="correct"]
+	- Yasmin and Putri did cycle to school yesterday.
+		[signal arg="wrong"]
+elif {question} == 10:
+	Rewrite the sentence making them positive!\
+	9)  Her aunt didn’t cook the dinner on Tuesday.
+	- Her aunt did cook the dinner on Tuesday.
+		[signal arg="wrong"]
+	-  Her aunt cooked the dinner on Tuesday.
+		[signal arg="correct"]
+	- Her aunt cook the dinner on Tuesday.
+		[signal arg="wrong"]

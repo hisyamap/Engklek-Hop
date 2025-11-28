@@ -1,0 +1,67 @@
+Choose the language that you want \
+\
+Pilih bahasa yang anda inginkan
+- English
+	[style name="tutorial_style"]
+	Swuks: Greetings, are you new to this Engklek Hop game? If so, I will teach you how to play this game.
+	[background arg="res://Assets/TutorialImage/Tutorial1.png" fade="0.0"]
+	Swuks: First thing first, there is a "power bar" on top of the level, this bar indicates how far the rock will land on the Engklek Box.
+	Swuks: (For example if you stop the power bar at the number 4 then the rock will be thrown into box number 4).
+	[background arg="res://Assets/TutorialImage/Tutorial2.png" fade="0.0"]
+	Swuks: To throw the rock and stop the power bar at the right number that you want, press the small button on the right (or press spacebar key on the keyboard).
+	[background arg="res://Assets/TutorialImage/Tutorial3.png" fade="0.0"]
+	Swuks: Then a random question will pop up that you need to answer (The higher the number you land in, the harder question you will get).
+	Swuks: If you get this multiple choice question, you need to choose the correct answer.
+	[background arg="res://Assets/TutorialImage/Tutorial4.png" fade="0.0"]
+	Swuks: If you get this type of question, you need to type in the words in the textbox above with the correct answer.
+	[background arg="res://Assets/TutorialImage/Tutorial5.png" fade="0.0"]
+	Swuks: If you get the answer right you will get this pop up message and player may proceed to play the game.
+	[background arg="res://Assets/TutorialImage/TutorialPlay.png" fade="0.0"]
+	Swuks: To continue the game, you need to cross the engklek box and go back to the starting place without any wrong moves.
+	[background arg="res://Assets/TutorialImage/Tutorial6.png" fade="0.0"]
+	Swuks: If the box in front the player is a single box or a double box with a rock in one of the box,
+	Swuks: then you need to jump with one leg using the button on the left of the screen (or press A on the keyboard) .
+	[background arg="res://Assets/TutorialImage/Tutorial7.png" fade="0.0"]
+	Swuks: If the box in front the player is a double box without a rock in one of the box,
+	Swuks: then you need to jump with two legs using the button on the right of the screen (or press D on the keyboard).
+	[background arg="res://Assets/TutorialImage/Tutorial8.png" fade="0.0"]
+	Swuks: Don't forget to pickup the rock that you throw otherwise you gonna lose the game.
+	Swuks: (You can pickup the rock after the player's character changes direction and jumps the rock twice)
+	Swuks: If the screen says "Level Passed", it means that you completed the level correctly and get +100 points for the reward.
+	[background arg="res://Assets/TutorialImage/Tutorial9.png" fade="0.0"]
+	[background arg="res://Assets/TutorialImage/Tutorial10.png" fade="0.0"]
+	Swuks: But if the screen says "You Lose", it means that you lose because of one of 3 things\:
+	Swuks: you pick the wrong answer, or you do the wrong jump move, or you didn't pickup the rock that you throw.
+	[signal arg="completed"]
+- Bahasa Indonesia
+	[style name="tutorial_style"]
+	Swuks: Hai, apakah kamu baru mengenal game Engklek Hop ini? Jika iya, maka aku akan mengajarkan kamu cara memainkan game ini.
+	[background arg="res://Assets/TutorialImage/Tutorial1.png" fade="0.0"]
+	Swuks: Pertama-tama, terdapat sebuah "bar kekuatan" ditengah layar, bar ini menunjukkan seberapa jauh lemparan batu ke kotak Engklek
+	Swuks: (Seperti pada saat kamu memberhentikan bar kekuatan itu pada nomor 4, maka batu akan dilemparkan pada box nomor 4).
+	[background arg="res://Assets/TutorialImage/Tutorial2.png" fade="0.0"]
+	Swuks: Untuk melemparkan batu dan memberhentikan bar kekuatan pada nomor yang diinginkan, tekan tombol kecil pada kanan layar (atau tekan tombol spasi pada keyboard).
+	[background arg="res://Assets/TutorialImage/Tutorial3.png" fade="0.0"]
+	Swuks: Setelah itu, akan muncul pertanyaan acak yang kamu perlu jawab (Semakin tinggi nomor kotaknya, semakin susah pertanyaan yang akan kamu dapatkan).
+	Swuks: Jika kamu mendapatkan pertanyaan pilihan ganda ini, maka kamu diperlukan untuk memilih jawaban yang benar.
+	[background arg="res://Assets/TutorialImage/Tutorial4.png" fade="0.0"]
+	Swuks: Jika kamu mendapatkan pertanyaan dengan tipe ini, maka kamu diperlukan untuk mengisi kotak teks diatas dengan jawaban yang benar.
+	[background arg="res://Assets/TutorialImage/Tutorial5.png" fade="0.0"]
+	Swuks: Jika kamu menjawab soal dengan benar, kamu akan mendapatkan pesan "Correct Answer" dan pemain diperbolehkan untuk melanjutkan permainan.
+	[background arg="res://Assets/TutorialImage/TutorialPlay.png" fade="0.0"]
+	Swuks: Untuk melanjutkan permainan, kamu perlu untuk melewati semua kotak engklek dan kembali ke tempat awal tanpa ada gerakan lompatan yang salah.
+	[background arg="res://Assets/TutorialImage/Tutorial6.png" fade="0.0"]
+	Swuks: Ketika kotak yang ada pada depan player adalah 1 kotak atau 2 kotak dengan batu pada salah satu kotak,
+	Swuks: maka kamu diharuskan untuk melompat dengan satu kaki menggunakan tombol pada kiri layar (atau tekan tombol A pada keyboard).
+	[background arg="res://Assets/TutorialImage/Tutorial7.png" fade="0.0"]
+	Swuks: Ketika kotak yang ada pada depan player adalah 2 kotak tanpa batu pada salah satu kotak,
+	Swuks: maka kamu diharuskan untuk melompat dengan dua kaki menggunakan tombol pada kanan layar (atau tekan tombol D pada keyboard).
+	[background arg="res://Assets/TutorialImage/Tutorial8.png" fade="0.0"]
+	Swuks: Jangan lupa untuk mengambil batu yang kamu lempar, jika tidak kamu akan kalah dalam permainan.
+	Swuks: (Kamu bisa mengambil batu setelah karakter pemain sudah berbalik badan dan melompati batu kedua kalinya)
+	[background arg="res://Assets/TutorialImage/Tutorial9.png" fade="0.0"]
+	Swuks: Apabila muncul "Level Passed" pada layar, itu artinya kamu telah menyelesaikan level dengan benar dan mendapatkan +100 poin sebagai hadiah.
+	[background arg="res://Assets/TutorialImage/Tutorial10.png" fade="0.0"]
+	Swuks: Tetapi ketika muncul "You Lose" pada layar, itu artinya kamu kalah karena satu dari 3 hal\:
+	Swuks: kamu salah dalam menjawab soal, atau kamu salah gerakan dalam melompat, atau kamu tidak mengambil batu yang kamu lempar.
+	[signal arg="completed"]

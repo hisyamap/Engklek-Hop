@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blanks with the correct answer!\
+	6)  When _____ you _____ a shower?
+	- does, takes
+		[signal arg="wrong"]
+	- do, take
+		[signal arg="correct"]
+	- do, takes
+		[signal arg="wrong"]
+elif {question} == 2:
+	Fill in the blanks with the correct answer!\
+	6)  He _____ _____ everynight. (don't come/doesn't come)
+	[text_input var="answer"]
+	if {answer} == "doesn't come" or {answer} == "does not come" or {answer} == "doesnt come":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blanks with the correct answer!\
+	6)  Tom and I _____ _____ together.
+	- does surfing
+		[signal arg="wrong"]
+	- did surfs
+		[signal arg="wrong"]
+	- don't surf
+		[signal arg="correct"]
+elif {question} == 4:
+	Fill in the blanks with the correct answer!\
+	6) I _____ _____ she gets the letter. (don’t think/doesn’t think)
+	[text_input var="answer"]
+	if {answer} == "don’t think" or {answer} == "do not think" or {answer} == "dont think":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blanks with the correct answer!\
+	6)  _____ he _____ the instructions?
+	- Does, read
+		[signal arg="correct"]
+	- Do, reads
+		[signal arg="wrong"]
+	- Does, reads
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blanks with the correct answer!\
+	6) We _____ _____ in the bank?. (don’t work/doesn’t work)
+	[text_input var="answer"]
+	if {answer} == "don’t work" or {answer} == "do not work" or {answer} == "dont work":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blanks with the correct answer!\
+	6)  _____ you _____ milk in the tea?
+	- Does, likes
+		[signal arg="wrong"]
+	- Do, like
+		[signal arg="correct"]
+	- Do, likes
+		[signal arg="wrong"]
+elif {question} == 8:
+	Fill in the blanks with the correct answer!\
+	6) John _____ _____ a book. (don’t read/doesn’t read)
+	[text_input var="answer"]
+	if {answer} == "doesn't read" or {answer} == "does not read" or {answer} == "doesnt read":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blanks with the correct answer!\
+	6)  _____ the train _____ at eleven o'clock?
+	- Do, arrives
+		[signal arg="wrong"]
+	- Do, arrive
+		[signal arg="wrong"]
+	- Does, arrive
+		[signal arg="correct"]
+elif {question} == 10:
+	Fill in the blanks with the correct answer!\
+	6) I live in Purwokerto, where _____ _____ live?. (do you/does you)
+	[text_input var="answer"]
+	if {answer} == "do you":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bigyo7ptmnjkp"]
+
+[ext_resource type="Texture2D" uid="uid://dyb3242d2idy1" path="res://Assets/Small rock.png" id="1_df876"]
+[ext_resource type="Script" path="res://gaco.gd" id="1_hgjcg"]
+[ext_resource type="AudioStream" uid="uid://bvtor5wcqxp4f" path="res://Assets/MusicSFX/Throwing Sound.wav" id="3_vu8rk"]
+[ext_resource type="AudioStream" uid="uid://quo3x1pl850e" path="res://Assets/MusicSFX/Pickup Sound.wav" id="4_j52sx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k40uw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mytn"]
+radius = 79.9928
+height = 299.973
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4a4rb"]
+radius = 15.0
+
+[node name="Gaco" type="RigidBody2D"]
+position = Vector2(0, -2)
+collision_layer = 2
+collision_mask = 6
+physics_material_override = SubResource("PhysicsMaterial_k40uw")
+script = ExtResource("1_hgjcg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_df876")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.19564e-08, 2)
+rotation = 1.55741
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CapsuleShape2D_0mytn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_4a4rb")
+
+[node name="ThrowingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vu8rk")
+volume_db = 3.0
+bus = &"Sound"
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_j52sx")
+volume_db = 6.0
+bus = &"Sound"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

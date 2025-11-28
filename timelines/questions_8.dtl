@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  My cousins cry all night. (The baby)
+	- The baby cry all night.
+		[signal arg="wrong"]
+	- The baby cries all night.
+		[signal arg="correct"]
+	- The baby crys all night.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Simple Present!\
+	8)  My brother _______ (modify) his car to the maximum.
+	[text_input var="answer"]
+	if {answer} == "modifies":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Sinta and Sri blush when he says beautiful to them. (She)
+	- She blush when he says beautiful to them.
+		[signal arg="wrong"]
+	- She blushs when he says beautiful to her.
+		[signal arg="wrong"]
+	- She blushes when he says beautiful to her.
+		[signal arg="correct"]
+elif {question} == 4:
+	Complete the following sentence using Simple Present!\
+	8)  My mother is the one who pays the ______ (tax).
+	[text_input var="answer"]
+	if {answer} == "taxes":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  My teacher approaches me while I'm studying. (My mother)
+	- My mother approaches me while I'm studying.
+		[signal arg="correct"]
+	- My mother approachs me while I'm studying.
+		[signal arg="wrong"]
+	- My mother approach me while I'm studying.
+		[signal arg="wrong"]
+elif {question} == 6:
+	Complete the following sentence using Simple Present!\
+	8)  She _______ (carry) on smiling even in the face of adversity.
+	[text_input var="answer"]
+	if {answer} == "carries":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Darian leaves them in the study, wired with energy. (she)
+	- She left them in the study, wired with energy.
+		[signal arg="wrong"]
+	- She leaves them in the study, wired with energy.
+		[signal arg="correct"]
+	- Darian left them in the studies, wired with energy.
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Simple Present!\
+	8)  My only ______ (worry) is that we won't get there on time.
+	[text_input var="answer"]
+	if {answer} == "worry":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence with the subjects in the brackets!\
+	8)  Tono marries his sweetheart in a glorious ceremony. (My cousin)
+	- My cousin marrys his sweetheart in a glorious ceremony.
+		[signal arg="wrong"]
+	- My cousin marry his sweetheart in a glorious ceremony.
+		[signal arg="wrong"]
+	- My cousin marries his sweetheart in a glorious ceremony.
+		[signal arg="correct"]
+elif {question} == 10:
+	Complete the following sentence using Simple Present!\
+	8)  She ______ (place) the dishes on the counter beside the sink.
+	[text_input var="answer"]
+	if {answer} == "places":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

@@ -1,0 +1,142 @@
+[gd_scene load_steps=15 format=3 uid="uid://bhlb7o6kvgqu4"]
+
+[ext_resource type="Script" path="res://game_ui.gd" id="1_0kydq"]
+[ext_resource type="Texture2D" uid="uid://crus54c43xqsk" path="res://Assets/Powerbar_over.png" id="1_roogr"]
+[ext_resource type="FontFile" uid="uid://dvrn08fvin7tu" path="res://Assets/RobotoCondensed-BlackItalic.ttf" id="2_kx5ip"]
+[ext_resource type="Texture2D" uid="uid://c7nbvlkr5y7uv" path="res://Assets/One Leg Jump Button.png" id="4_v8x0h"]
+[ext_resource type="Texture2D" uid="uid://ct1qnn1g1f7kn" path="res://Assets/Two Legs Jump Button.png" id="5_vehw5"]
+[ext_resource type="Texture2D" uid="uid://btox6haahqm13" path="res://Assets/Throw Pickup Rock Button.png" id="6_oqgas"]
+[ext_resource type="Texture2D" uid="uid://c5u76w6rn1en3" path="res://Assets/Minimize Button (Gameplay).png" id="7_xk3qs"]
+[ext_resource type="Texture2D" uid="uid://c2r0ymecget8a" path="res://Assets/Maximize Button (Gameplay).png" id="8_jvy26"]
+[ext_resource type="Texture2D" uid="uid://cqa8eovthelgk" path="res://Assets/Pause Button.png" id="9_a3btb"]
+
+[sub_resource type="Gradient" id="Gradient_ig7he"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2qi3"]
+gradient = SubResource("Gradient_ig7he")
+width = 600
+height = 60
+
+[sub_resource type="Gradient" id="Gradient_76s4h"]
+colors = PackedColorArray(1, 1, 0, 1, 0.993655, 0, 0.322882, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b3vd8"]
+gradient = SubResource("Gradient_76s4h")
+width = 600
+height = 60
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cqpam"]
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_0kydq")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="Control"]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 91.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("2_kx5ip")
+theme_override_font_sizes/font_size = 32
+text = "Score: 0"
+
+[node name="PlayerTurn" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -111.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 53.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_kx5ip")
+theme_override_font_sizes/font_size = 32
+
+[node name="PowerBar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 200.0
+offset_right = 940.0
+offset_bottom = 260.0
+max_value = 10.0
+step = 0.1
+texture_under = SubResource("GradientTexture2D_e2qi3")
+texture_over = ExtResource("1_roogr")
+texture_progress = SubResource("GradientTexture2D_b3vd8")
+
+[node name="OneLegJumpButton" type="TouchScreenButton" parent="Control"]
+position = Vector2(70, 520)
+texture_normal = ExtResource("4_v8x0h")
+action = "onelegjump"
+
+[node name="TwoLegsJumpButton" type="TouchScreenButton" parent="Control"]
+position = Vector2(1060, 520)
+texture_normal = ExtResource("5_vehw5")
+action = "twolegsjump"
+
+[node name="ThrowPickupGacoButton" type="TouchScreenButton" parent="Control"]
+position = Vector2(1090, 410)
+texture_normal = ExtResource("6_oqgas")
+action = "throwpickupgaco"
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 0.05
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_right = 94.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="MinimizeButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqpam")
+icon = ExtResource("7_xk3qs")
+flat = true
+icon_alignment = 1
+
+[node name="MaximizeButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqpam")
+icon = ExtResource("8_jvy26")
+flat = true
+icon_alignment = 1
+
+[node name="PauseButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_pressed_color = Color(0.45098, 0.45098, 0.45098, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cqpam")
+icon = ExtResource("9_a3btb")
+flat = true
+icon_alignment = 1
+
+[connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/MinimizeButton" to="." method="_on_minimize_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/MaximizeButton" to="." method="_on_maximize_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/PauseButton" to="." method="_on_pause_button_pressed"]

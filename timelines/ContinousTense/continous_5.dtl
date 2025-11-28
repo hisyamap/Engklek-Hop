@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Fill in the blank with the correct answer!\
+	5)  ______ Mr. Wilson taking out the garbage now?
+	- Are 
+		[signal arg="wrong"]
+	- Aren't
+		[signal arg="wrong"]
+	- Is
+		[signal arg="correct"]
+elif {question} == 2:
+	Fill in the blank with the correct answer!\
+	5)  ______ your father still waiting at the bus stop? (Is/Am/Are)
+	[text_input var="answer"]
+	if {answer} == "Is" or {answer} == "is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Fill in the blank with the correct answer!\
+	5)  ______ you going to eat lunch?
+	- Isn't 
+		[signal arg="wrong"]
+	- Aren't
+		[signal arg="correct"]
+	- Is
+		[signal arg="wrong"]
+elif {question} == 4:
+	Fill in the blank with the correct answer!\
+	5)  We _____ leaving to the island. (isn't/am not/aren't)
+	[text_input var="answer"]
+	if {answer} == "aren't" or {answer} == "arent" or {answer} == "Aren't" or {answer} == "Arent":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Fill in the blank with the correct answer!\
+	5)  ______ you saying you want to proceed like we did yesterday?
+	- Are 
+		[signal arg="correct"]
+	- Aren't
+		[signal arg="wrong"]
+	- Isn't
+		[signal arg="wrong"]
+elif {question} == 6:
+	Fill in the blank with the correct answer!\
+	5)  ______ I seeing a real place? (Is/Am/Are)
+	[text_input var="answer"]
+	if {answer} == "Am" or {answer} == "am":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Fill in the blank with the correct answer!\
+	5)  What if what I ______ telling you drove you away?
+	- isn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="wrong"]
+	- am not
+		[signal arg="correct"]
+elif {question} == 8:
+	Fill in the blank with the correct answer!\
+	5)  ______ you going to help me into my wagon today? (Is/Am/Are)
+	[text_input var="answer"]
+	if {answer} == "Are" or {answer} == "are":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Fill in the blank with the correct answer!\
+	5)  They ______ listening to my advice.
+	- isn't
+		[signal arg="wrong"]
+	- aren't
+		[signal arg="correct"]
+	- am not
+		[signal arg="wrong"]
+elif {question} == 10:
+	Fill in the blank with the correct answer!\
+	5)  It ____ hunting season. (isn't/is/aren't)
+	[text_input var="answer"]
+	if {answer} == "is" or {answer} == "Is":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

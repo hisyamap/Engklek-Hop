@@ -1,0 +1,87 @@
+[style name="quiz_style"]
+[signal arg="random"]
+if {question} == 1:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  Sri does't work on Saturdays. (Joko and Reno)
+	- Joko and Reno does't work on Saturdays.
+		[signal arg="wrong"]
+	- Joko and Reno don't work on Saturdays.
+		[signal arg="correct"]
+	- Joko and Reno doesn't works on Saturdays.
+		[signal arg="wrong"]
+elif {question} == 2:
+	Complete the following sentence using Simple Present!\
+	7)  He ______ (make) me chocolate for Valentine.
+	[text_input var="answer"]
+	if {answer} == "makes":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 3:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  I go to school by school bus. (My friend)
+	- My friend goes to school by school bus.
+		[signal arg="correct"]
+	- My friend go to school by school bus.
+		[signal arg="wrong"]
+	- My friend going to school by school bus.
+		[signal arg="wrong"]
+elif {question} == 4:
+	Complete the following sentence using Simple Present!\
+	7)  He _______ (pay) me well.
+	[text_input var="answer"]
+	if {answer} == "pays":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 5:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  Does Rina read short stories? (Brian and Tono)
+	- Does Brian and Tono read short stories?
+		[signal arg="wrong"]
+	- Do Brian and Tono reading short stories?
+		[signal arg="wrong"]
+	- Do Brian and Tono read short stories?
+		[signal arg="correct"]
+elif {question} == 6:
+	Complete the following sentence using Simple Present!\
+	7)  They never _______(do) their homework.
+	[text_input var="answer"]
+	if {answer} == "do":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 7:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  We don't speak Javanese or Sundanese. (He)
+	- He don't speak Javanese or Sundanese.
+		[signal arg="wrong"]
+	- He doesn't speak Javanese or Sundanese.
+		[signal arg="correct"]
+	- He don't speaks Javanese or Sundanese.
+		[signal arg="wrong"]
+elif {question} == 8:
+	Complete the following sentence using Simple Present!\
+	7)  Joe and Sinta _______ (swim) twice a week.
+	[text_input var="answer"]
+	if {answer} == "swim":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]
+elif {question} == 9:
+	Rewrite the sentence with the subjects in the brackets!\
+	7)  Gebian and Hisan don't prefer drinking apple juice. (The students)
+	- The students don't prefer drinking apple juice.
+		[signal arg="correct"]
+	- The students doesn't prefered drinking apple juice.
+		[signal arg="wrong"]
+	- The students doesn't prefer drinking apple juice.
+		[signal arg="wrong"]
+elif {question} == 10:
+	Complete the following sentence using Simple Present!\
+	7)  He _______ (like) her a lot.
+	[text_input var="answer"]
+	if {answer} == "likes":
+		[signal arg="correct"]
+	else:
+		[signal arg="wrong"]

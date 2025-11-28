@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://dw7i5ruosqg0e"]
+
+[ext_resource type="Script" path="res://select_player_menu.gd" id="1_l7u3c"]
+[ext_resource type="Texture2D" uid="uid://0s5fclaqotjp" path="res://Assets/Select Player.png" id="1_y60yw"]
+[ext_resource type="Texture2D" uid="uid://dspl0tqvs60vw" path="res://Assets/Ready Button.png" id="2_8h1qi"]
+[ext_resource type="Texture2D" uid="uid://c80fktfnjgs8r" path="res://Assets/Back Button.png" id="3_6fc7e"]
+[ext_resource type="FontFile" uid="uid://dvrn08fvin7tu" path="res://Assets/RobotoCondensed-BlackItalic.ttf" id="3_32xfo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjy7l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxyf2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jqac6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5616"]
+
+[node name="SelectPlayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7u3c")
+tween_intensity = 1.1
+tween_duration = 0.3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_y60yw")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 285.0
+offset_bottom = 91.0
+scale = Vector2(0.9, 0.9)
+theme_override_colors/icon_pressed_color = Color(0.450648, 0.450648, 0.450648, 1)
+theme_override_icons/icon = ExtResource("3_6fc7e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wjy7l")
+flat = true
+icon_alignment = 1
+
+[node name="ReadyButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -120.0
+offset_right = 209.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.9, 0.9)
+theme_override_colors/icon_pressed_color = Color(0.450648, 0.450648, 0.450648, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wjy7l")
+icon = ExtResource("2_8h1qi")
+flat = true
+icon_alignment = 1
+
+[node name="Player1Name" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 108.0
+offset_top = 520.0
+offset_right = 302.0
+offset_bottom = 559.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 0.745098)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_32xfo")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kxyf2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_jqac6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h5616")
+placeholder_text = "Insert Your Name"
+alignment = 1
+clear_button_enabled = true
+
+[node name="Player2Name" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 520.0
+offset_right = 591.0
+offset_bottom = 559.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 0.745098)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_32xfo")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kxyf2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_jqac6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h5616")
+placeholder_text = "Insert Your Name"
+alignment = 1
+clear_button_enabled = true
+
+[node name="Player3Name" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 520.0
+offset_right = 884.0
+offset_bottom = 559.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 0.745098)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_32xfo")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kxyf2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_jqac6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h5616")
+placeholder_text = "Insert Your Name"
+alignment = 1
+clear_button_enabled = true
+
+[node name="Player4Name" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 982.0
+offset_top = 520.0
+offset_right = 1176.0
+offset_bottom = 559.0
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 0.745098)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_32xfo")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kxyf2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_jqac6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h5616")
+placeholder_text = "Insert Your Name"
+alignment = 1
+clear_button_enabled = true
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ReadyButton" to="." method="_on_ready_button_pressed"]
